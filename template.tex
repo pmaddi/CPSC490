@@ -22,7 +22,7 @@
 \date{}
 \maketitle
 
-
+\tableofcontents
 
 \subsection*{Abstract}
 
@@ -30,21 +30,62 @@
 
 I chose these SDN systems because they are open source and well documented
 
-
 \subsection{Shared logs}
+
+A set of totally ordered shared logs can provide weaker consistency on the data structure built on top of it. Each element in the logs have a set of dependencies. That is, to know element \verb_e_, all of the elements of \verb_e.dependencies_ must be loaded.  By allowing dependencies to be specified between elements of various shared logs, arbitrary partial orderings of nodes can be constructed while preserving the convenience of having totally ordered logs. By carefully selecting what operations on the higher level data structure require global reads and writes, causal ordering can be guaranteed across the network.
+
+Tango \cite{Tango} aims to provide a way to store metadata by allowing transactional access to arbitrary data structures with persistence and high availability. The Tango paper notes that some services such as ZooKeeper provide persistence, high availability, and strong consistency---but only for specific data structures.
+
+Tango objects are a class of data structures stored in memory that built on the shared log. The history of the object is stored directly in the log, and each object can have multiple views which are copies of the data structure stored by the clients. The source of truth in the system is the shared log, and the views are ``soft state'' that can be reconstructed by replaying the shared history. Modifications to Tango objects are made by appending updates to the history, and accesses are made by syncing the view with the history.
+
+Using a shared log makes strongly consistent operations easier than they would be in a conventional distributed system. Such applications include remote mirroring, coordinated rollbacks, and consistent snapshots across objects. These options are available since views can be synced to any offset in the log and replayed as needed.
+
+The shared log abstraction represents a total ordering of the updates added to the log. This abstraction is a common way to organize changes to a file system, for instance \cite{Log}. By definition, this means that it is a set with a relation that satisfies reflexivity, transitivity and symmetry, where any two items can be compared. On the other hand, we want to represent a partial ordering of the updates so that we can allow the user the flexibility of not relying on other users writes. A directed acyclic graph is a data structure that can represent partial ordering relations. Initially, we considered using a shared DAG as a representation of state in the system. However, this seemed to leave the system too unconstrained since it would be difficult to maintain ordering across nodes and read forward to get new data. 
 
 \subsection{Consistency}
 
+Not all applications require a strong consistency guarantee. Depending on the particular application, lower latency reads or the ability to write immediately could be preferred. We would like to enable our users to select what level of consistency works for them. Rather than have the consistency level be specified at development time, we would like to support this at the API level. By having something like a Service Level Agreement specified within the update\_helper and query\_helper, the client could configure the guarantee that works best in the situation. The SLA specified would then inform where in the DAG to place the update. The motivation for such a system is that different procedures in an application can have different guarantee requirements.
+
+SLA requirements we may support include: \cite{SLA}
+
+\begin{description}
+\item[strong] returns the value of the last preceding Put(key) performed by any client
+\item[read-my-writes] returns the value written by the last preceding Put(key) in the same session or returns a later version; if no Puts have been performed to this key in this session, then the Get may return any previous value as in eventual consistency.
+\item[bounded(t)] returns a value that is stale by at most t seconds. Specifically, it returns the value of the latest Put(key) that completed more than t seconds ago or some more recent version.
+\item[causal] returns the value of a latest Put(key) that causally precedes it or returns some later version. The causal precedence relation $<$ is defined such that op1 $<$ op2 if either
+(a) op1 occurs before op2 in the same session,
+(b) op1 is a Put(key) and op2 is a Get(key) that
+returns the version put in op1, or
+(c) for some op3, op1 $<$ op3 and op3 $<$ op2
+\end{description}
+
+Any of these consistencies could be supported with the multiple shared log structure, as long we carefully implement the distributed data structure on top of it.
+
 \section{Software Defined Networking}
 
-In general, SDN allows central control of a network.
+In general, SDN allows central control of a network. It aims to keep the complexity of the network manageable by providing abstractions for the underlying network devices. SDN provides four main advantages over traditional networks:
 
-\subsection{OpenFlow}
+\begin{itemize}
+\item Separation of the control and data planes
+\item Centralization of the control plane
+\item Programmability of the control plane
+\item Standardization of API's
+\end{itemize}
+\cite{SDN}
 
-Dec 2
+Networking protocols are often arranged into data and control planes. The data plane consists of all the messages that are generated by the network clients. The network must then decide how to transport the packets from source to destination, which requires some level of decision making by the control layer. In a traditional network, these decisions are made by the control layer of the router which determines which routing behavior to perform. This might include computing L3 or L2
+routing protocols such as Open Shortest Path First or Spanning Tree. A network manager might keep track of traffic statistics and the network state.
+
+With SDN, this control logic is both separate and centralized, away from the data plane. The data plane still forwards the packets using the forwarding table assigned by the control plane, but that logic is separated out into a controller. This has the added benefit of reducing the cost of the switches. SDN's centralization of control makes determining the network state faster than with standard distributed network practices, and policy changes can be propagated much faster.
+Centralized control in SDN networks also have scaling issues, and it is necessary to divide the network into subnets that can share control strategy.
+
+\subsection*{OpenFlow}
+
+OpenFlow is the protocol for communicating with the routers and switches. It allows the controller to install flows in the system.
 
 \subsection{ONOS}
 
+\cite{berde2014onos}
 ONOS is an open source network ``operating system'' that aims to have distributed control of the network. Like the other systems covered here, ONOS uses the OpenFlow control-data plane interface. The overall architecture of ONOS is composed of a network view that contains a network graph abstraction, OpenFlow managers, as well as a Zookeeper registry for coordination.
 
 To interact with the OpenFlow interface, ONOS uses modules from Floodlight, which is another SDN implementation. This includes the switch manager, the IO loop, and link discovery. These modules as well as shared Floodlight module manager means that ONOS is slightly more compatible with other SDN controllers.
@@ -94,11 +135,14 @@ Datastore can be pugged into any implementation
 Can get topology information from a bgp feed
 
 Plugins?
-Applications:
+jpplications:
 	Bgp and topology
 	Model to model
 	Generic model adoption
 
+OpenDaylight network virtualization
+
+\cite{ODL}
 
 \subsection {Comparison of SDN systems}
 
@@ -106,12 +150,16 @@ Applications:
 
 <The OpenDaylight controller is built using the Java OSGi framework. OSGi adds a modular framework that allows starting, stopping, loading and unloading of Java modules without bringing down the entire running JVM platform. Ryu controller does not offer this comodity. In Ryu we need to stop the controller and run it again with the needed modules for the REST methods we want to execute or we need to build a REST API with all REST modules included in it, which runs once and provides all REST methods without stopping the controller. >
 
+how is topology discovered
+
 
 \section{Common Data Structures}
 
 ugh
 
-\section{SDN extensions}
+\section{Proposed SDN extensions}
+
+There are two main representations of state in the systems we have discussed. There is a coordination service 
 
 \subsection{ONOS}
 
@@ -119,18 +167,19 @@ make graph structure causally consistent (topology representations with a log ba
 
 build a log based event notification system?
 
+causal graph system
+    eventual consistency does not seem to affect the control plane behavior in traditional applications
 
-\subsection{Ryu}
+adjacency matrix of the graph in the logs
 
+causal coordination system since there are diffrent network elements
 
-
-
+maintian separations of the topology graph with adjancency in the runtime
 \subsection{OpenDaylight}
 
 OpenDaylight's modularity and data store agnostic setup makes it well suited for weakly consistent structures.
 
-
-
+\section{Conclusion}
 
 \bibliographystyle{acm}
 \bibliography{template}

@@ -1,3 +1,41 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Tango}
+{\sc Balakrishnan, M., Malkhi, D., Wobber, T., Wu, M., Prabhakaran, V., Wei,
+  M., Davis, J.~D., Rao, S., Zou, T., and Zuck, A.}
+\newblock Tango: Distributed data structures over a shared log.
+\newblock In {\em Proceedings of the Twenty-Fourth ACM Symposium on Operating
+  Systems Principles\/} (New York, NY, USA, 2013), SOSP '13, ACM, pp.~325--340.
+
+\bibitem{berde2014onos}
+{\sc Berde, P., Gerola, M., Hart, J., Higuchi, Y., Kobayashi, M., Koide, T.,
+  Lantz, B., O'Connor, B., Radoslavov, P., Snow, W., et~al.}
+\newblock Onos: towards an open, distributed sdn os.
+\newblock In {\em Proceedings of the third workshop on Hot topics in software
+  defined networking\/} (2014), ACM, pp.~1--6.
+
+\bibitem{SDN}
+{\sc Jain, R., and Paul, S.}
+\newblock Network virtualization and software defined networking for cloud
+  computing: a survey.
+\newblock {\em Communications Magazine, IEEE 51}, 11 (November 2013), 24--31.
+
+\bibitem{ODL}
+{\sc Medved, J., Tkacik, A., Varga, R., and Gray, K.}
+\newblock Opendaylight: Towards a model-driven sdn controller architecture.
+\newblock In {\em World of Wireless, Mobile and Multimedia Networks (WoWMoM),
+  2014 IEEE 15th International Symposium on a\/} (June 2014), pp.~1--6.
+
+\bibitem{Log}
+{\sc Rosenblum, M., and Ousterhout, J.~K.}
+\newblock The design and implementation of a log-structured file system.
+\newblock {\em ACM Trans. Comput. Syst. 10}, 1 (Feb. 1992), 26--52.
+
+\bibitem{SLA}
+{\sc Terry, D.~B., Prabhakaran, V., Kotla, R., Balakrishnan, M., Aguilera,
+  M.~K., and Abu-Libdeh, H.}
+\newblock Consistency-based service level agreements for cloud storage.
+\newblock In {\em Proceedings of the Twenty-Fourth ACM Symposium on Operating
+  Systems Principles\/} (New York, NY, USA, 2013), SOSP '13, ACM, pp.~309--324.
 
 \end{thebibliography}
