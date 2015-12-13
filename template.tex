@@ -159,7 +159,21 @@ ugh
 
 \section{Proposed SDN extensions}
 
-There are two main representations of state in the systems we have discussed. There is a coordination service 
+There are two main representations of state in the systems we have discussed. There is a coordination service ONOS that maintains the naming and other information that must be stored by the controllers. Also, there is a representaion of the graph topology that each controller must learn from the physical switches under its domain. Then, to generate the full topology of the network, these subnetwork topologies must be assembled in the full network view.
+
+\subsection{Georeplication}
+
+In both ONOS and OpenDaylight, the graph topology information stored by the nodes is eventually consistent. The ONOS paper suggests that this is "good enough" for traditional netowrking, and presumably good enough for their applications. However, I would argue that this can lead to problems with advanced SDN applications, primarily with network virtualization.
+
+Imagine a network configuration with two groups that must be kept separate---Imagine that North and South Korea are on the same SDN network, and we want no packets to flow between the North Korea Virtual Network Segement and the South Korea VNS. In this case, 
+
+In particular, this could be import for effcective separation of regions in network virtualization situations.
+
+
+
+\subsection{Coordination}
+
+Different netowrk elements only work with their own data.
 
 \subsection{ONOS}
 
