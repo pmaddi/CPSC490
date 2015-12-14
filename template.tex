@@ -112,21 +112,53 @@ The data model behind the graph abstraction represents each network object in a 
 
 The Network View API
 
-\subsection{Ryu}
-
-Dec 2
-
+% \subsection{Ryu}
+% 
+% Dec 2
+% 
 \subsection{OpenDaylight}
 
-The OpenDaylight defines a model driven approach for managing software defined networks. It aims to create a more modular system for SDN, where subscribers and providers for services are plugins to the system. This Model Driven Software Engineering approach creates a framework for relationships between models, standard mappings and patterns that enable model generation. An advantage of the system, therefore, is that it can create code and API's directly from models. The 
+The OpenDaylight defines a model driven approach for managing software defined networks. It aims to create a more modular system for SDN, where subscribers and providers for services are plugins to the system. This Model Driven Software Engineering approach creates a framework for relationships between models, standard mappings and patterns that enable model generation. An advantage of the system, therefore, is that it can create code and API's directly from models.
 
 OpenDaylight controller uses YANG as a data modeling language to specify these cross platform portable data types, which can describe network operation. While YANG was initially developed for this purpose, it effectively describes other network elements, including policy, protocol, and subscriptions to services. Rather than being an object-oriented structure, YANG is tree-structured and includes complex data types like lists and unions.
 
 <yang example>
+\begin{listing}
 
-To modify the data types defined by YANG, OpenDaylight uses the NETCONF and RESTCONF protocols. NETCONF is a network management protocol that defines the configuration and operations on a data store. It also has the ability to run remote procedure calls and send notifications about the underlying data. (more about netfconf from papers?) NETCONF encodes its messages and data in XML. RESTCONF is similar to NETCONF, except that it exports a REST interface over HTTP for use by external applications.
+     grouping target {
+         leaf address {
+             type inet:ip-address;
+             description "Target IP address";
+         }
+         leaf port {
+             type inet:port-number;
+             description "Target port number";
+         }
+     }
+
+     container peer {
+         container destination {
+             uses target;
+         }
+     }
+
+   NETCONF XML Example:
+
+     <peer>
+       <destination>
+         <address>192.0.2.1</address>
+         <port>830</port>
+       </destination>
+     </peer>
+\end{listing}
+
+
+To modify the data defined by YANG, OpenDaylight uses the NETCONF and RESTCONF protocols. NETCONF is a network management protocol that defines the configuration and operations on a data store. It also has the ability to run remote procedure calls and send notifications about the underlying data. NETCONF encodes its messages and data in XML. RESTCONF is similar to NETCONF, except that it exports a REST interface over HTTP for use by external applications.
 
 <opendaylight schematic>
+
+The infrastructrue of 
+
 
 Service abstraction layer
 Network devices and applications go through plugins. Applications interact with the data store through RESTCONF
@@ -134,11 +166,18 @@ Plugins can be binding aware or binding independednt
 Datastore can be pugged into any implementation
 Can get topology information from a bgp feed
 
+
+
 Plugins?
 jpplications:
 	Bgp and topology
 	Model to model
 	Generic model adoption
+
+
+
+
+
 
 OpenDaylight network virtualization
 
@@ -181,9 +220,14 @@ Instead, with eventual consistency over the topology, the following ordering of 
 \item [Event 2] Switch A connects to a controller in the North Korea VNS.
 \end{description}
 
-Which the virtualization service deems valid.
+Which the virtualization service deems valid after Event 3.
 
-Therefore, before it is possble for the network virtualizaton application to observe after the disconnection event that the Switch is disconnected from the South Korean VNS. In reality, however, the switch is connected to both the South Korean and North Korean VNS's. As we can see, eventual consistency leaves something to be desired when virtualzing a network.
+Therefore, before it is possble for the network virtualizaton application to observe after the disconnection event that the Switch is disconnected from the South Korean VNS. In reality, however, the switch is connected to both the South Korean and North Korean VNS's. And if the 
+As we can see, eventual consistency leaves something to be desired when virtualzing a network.
+
+Is this a global invariant that any switch cannot be part of the South and North Korea VNS's? If so, supporting causal consistency of the graph operations wouldn't do much to prevent such an attack on the system.
+
+If the graph supported causal ordering guarantees, we could know that 
 
 
 \subsection{Coordination}
