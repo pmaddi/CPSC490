@@ -152,8 +152,10 @@ An operation configuring such a peer with NETFCONF:\cite{yang}
 \end{lstlisting}
 
 
-We will focus on the specific application of network virtualization in OpenDaylight.
+We will focus on the specific application of network virtualization in OpenDaylight. The network virtualization libarary of OpenDaylight comes packaged with the ODL Controller Platform repository and 
 
+The OSCP controller provides the centralized control plane tier in the three-tier Open SDN architecture diagram above. While OSCP is logically centralized, the controller is installed on multiple controller-nodes for redundancy and scale. Each controller-node is simply a separate installed image of the software (or separate hardware appliances with the software installed on it). All the controller-nodes communicate with each other to form a controller cluster, where each node
+in the cluster shares information with other nodes in the cluster to ensure availability in case any node fails. 
 % <opendaylight schematic>
 % 
 % Datastore can be pugged into any implementation
