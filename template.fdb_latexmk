@@ -1,5 +1,5 @@
 # Fdb version 3
-["bibtex template"] 1450109444 "template.aux" "template.bbl" "template" 1450109445
+["bibtex template"] 1450109444 "template.aux" "template.bbl" "template" 1450113060
   "/usr/local/texlive/2014/texmf-dist/bibtex/bst/base/acm.bst" 1292289607 21064 c61a48664f3c347ce7f73c1a6a530506 ""
   "template.aux" 1450109445 1662 c7ad4bfdf29246a719f3f1f79dba09ed ""
   "template.bcf" 0 -1 0 ""
@@ -7,7 +7,7 @@
   (generated)
   "template.blg"
   "template.bbl"
-["pdflatex"] 1450109444 "template.tex" "template.pdf" "template" 1450109445
+["pdflatex"] 1450109444 "template.tex" "template.pdf" "template" 1450113060
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
