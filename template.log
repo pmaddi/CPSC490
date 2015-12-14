@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  13 DEC 2015 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 DEC 2015 00:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -207,6 +207,31 @@ Underfull \hbox (badness 1264) in paragraph at lines 101--102
 []\OT1/ptm/m/n/10 ONOS uses Zookeeper as a co-or-di-na-tion mech-a-
  []
 
+
+! LaTeX Error: Environment listing undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 \begin{listing}
+                     
+? 
+
+! LaTeX Error: \begin{document} ended by \end{listing}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \end{listing}
+                   
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--154
+[]\OT1/ptm/m/n/10 <peer> <des-ti-na-tion> <ad-dress>192.0.2.1</address>
+ []
+
 [3] (./template.bbl [4]
 Underfull \hbox (badness 1122) in paragraph at lines 24--28
 []\OT1/ptm/m/sc/10 Medved, J., Tkacik, A., Varga, R., and
@@ -222,10 +247,10 @@ une
 
 ] (./template.aux) ) 
 Here is how much of TeX's memory you used:
- 1821 strings out of 493117
- 26356 string characters out of 6135433
+ 1823 strings out of 493117
+ 26373 string characters out of 6135433
  89626 words of memory out of 5000000
- 5247 multiletter control sequences out of 15000+600000
+ 5249 multiletter control sequences out of 15000+600000
  20439 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,8n,23p,848b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -236,7 +261,7 @@ fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (5 pages, 86172 bytes).
+Output written on template.pdf (5 pages, 86667 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream
