@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex template"] 1450115312 "template.aux" "template.bbl" "template" 1450115373
-  "template.aux" 1450115312 1666 fdbc899abc74c919dc256119df34d134 ""
+["bibtex template"] 1450117192 "template.aux" "template.bbl" "template" 1450117192
+  "template.aux" 1450117192 1397 8166056e18c6396bdfbbb03523ee08d3 ""
   "template.bcf" 0 -1 0 ""
   "template.bib" 1450086337 6148 222b8233913a72a41333da04068fbfdc ""
   (generated)
   "template.blg"
   "template.bbl"
-["pdflatex"] 1450115312 "template.tex" "template.pdf" "template" 1450115373
+["pdflatex"] 1450117191 "template.tex" "template.pdf" "template" 1450117191
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -15,7 +15,6 @@
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1136768653 4524 6bce29db5bc272ba5f332261583fee9c ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm" 1136768653 2124 2601a75482e9426d33db523edf23570a ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm" 1136768653 4408 25b74d011a4c66b7f212c0cc3c90061b ""
-  "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm" 1136768653 2680 312a2d12b1f1df8ee0212e7ba1962402 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm" 1136768653 2288 f478fc8fed18759effb59f3dad7f3084 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm" 1136768653 4640 532ca3305aad10cc01d769f3f91f1029 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -36,7 +35,6 @@
   "/usr/local/texlive/2014/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf" 1136768653 1344 6ff472164bf9de0fb2e864b28ac156d9 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf" 1136768653 1372 788387fea833ef5963f4c5bffe33eb89 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf" 1136768653 1380 0ea3a3370054be6da6acd929ec569f06 ""
-  "/usr/local/texlive/2014/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf" 1136768653 1948 7330aeef3af211edff3b35fb2c12a0fd ""
   "/usr/local/texlive/2014/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf" 1136768653 1384 a9d8adaf491ce34e5fba99dc7bbe5f39 ""
   "/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1335995445 7612 c47308d923ec19888707b0f1792b326a ""
@@ -77,10 +75,9 @@
   "/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1401025944 1445653 26a0aacf3d70032b1ec192e8c7792117 ""
   "/usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt" 1401025990 3832012 904d82bdcc8abf2b1cd296990b82553b ""
   "/usr/local/texlive/2014/texmf.cnf" 1401025936 577 a59edbde8d3a8c549d0eeaab1739e2ff ""
-  "template.aux" 1450115153 1681 5fa038f34b411b645bcfe28e842122e6 ""
-  "template.bbl" 1450113889 2880 282457c9b572528019042e55bc3925f1 "bibtex template"
-  "template.tex" 1450115372 20569 69e545df08d72f6368c3440c5ce7ad13 ""
-  "template.toc" 1450115153 718 e0c52b85d7e26c2df2420aca3014137c ""
+  "template.bbl" 0 -1 0 "bibtex template"
+  "template.tex" 1450115540 20607 1bfc4aad246bf90c03fe3f3e6ab80d99 ""
+  "template.toc" 0 -1 0 ""
   (generated)
   "template.aux"
   "template.pdf"
