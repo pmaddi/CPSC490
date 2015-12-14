@@ -212,7 +212,7 @@ Which the virtualization service deems valid after Event 3.
 
 Therefore, before it is possble for the network virtualizaton application to observe after the disconnection event that Alice is disconnected from the Enginerring VNS. In reality, however, Alice is connected to both the Engineering and Accounting VNS's. Clearly, in this case, some security measures could be installed to prevent such attacks on the network such as requiring authentiction or ACL's---But it does illustrate that only eventual consistency leaves something to be desired when virtualzing a network. Such problems compound when we try to build larger scale geo-distrubuted virtualized networks, since correlated network splits and latency issues are compounded.
 
-A simple solution to this problem is to simply require strong consistency over the link-state graph views \cite{bgp:rfc}.
+A simple solution to this problem is to simply require strong consistency over the link-state graph views \cite{bgp:rfc}. This could be implemented by having a Paxos-like service that requires majority consensus to make link-state changes.
 
 Is this a global invariant that any switch cannot be part of the South and North Korea VNS's? If so, supporting causal consistency of the graph operations wouldn't do much to prevent such an attack on the system.
 
