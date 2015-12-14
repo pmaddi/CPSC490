@@ -1,7 +1,7 @@
 \begin{thebibliography}{10}
 
 \bibitem{ONV:wiki}
-Opendaylight network virtualization (onv), 2013.
+Opendaylight network virtualization (onv).
 
 \bibitem{Tango}
 {\sc Balakrishnan, M., Malkhi, D., Wobber, T., Wu, M., Prabhakaran, V., Wei,
@@ -33,6 +33,11 @@ Opendaylight network virtualization (onv), 2013.
 \newblock Network virtualization and software defined networking for cloud
   computing: a survey.
 \newblock {\em Communications Magazine, IEEE 51}, 11 (November 2013), 24--31.
+
+\bibitem{bgp:rfc}
+{\sc Lapukhov, P.}
+\newblock Centralized routing control in bgp networks using link-state
+  abstraction.
 
 \bibitem{yang}
 {\sc M.~Bjorklund, E.}
