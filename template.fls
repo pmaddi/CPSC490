@@ -32,6 +32,8 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listing/listing.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listing/listing.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
