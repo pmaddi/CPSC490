@@ -27,9 +27,9 @@
 
 \subsection*{Abstract}
 
-\section{Background}
+I describe two possible extensions to the SDN framework that could benefit the application of network virtualization.
 
-I chose these SDN systems because they are open source and well documented
+\section{Background}
 
 \subsection{Shared logs}
 
@@ -90,11 +90,9 @@ ONOS is an open source network ``operating system'' that aims to have distribute
 
 To interact with the OpenFlow interface, ONOS uses modules from Floodlight, which is another SDN implementation. This includes the switch manager, the IO loop, and link discovery. These modules as well as shared Floodlight module manager means that ONOS is slightly more compatible with other SDN controllers.
 
-The network view data model was stored in an ONOS graph database built on top of a distributed and persistent key-value store called \emph{RamCloud}. RamCloud exposes the Blueprint graph API which applications use to access the network state. The system guarantees eventual consistency in the graph view. 
+The network view data model was stored in an ONOS graph database built on top of a distributed and persistent key-value store called \emph{RamCloud}. RamCloud exposes the Blueprint graph API which applications use to access the network state. The system guarantees eventual consistency in the graph view.\cite{berde2014onos} 
 
 The transition semantics of the graph database are maintained to correspond with structural nature of the graph, such as requiring that an edge connects two nodes. To justify that eventual consistency is good enough for the graph view, some of the ONOS experiments show that when using redundant and identical flow path computation on all instances, the computation modules on each instance converge to the same path. Also, legacy networks have embedded control and are not logically centralized, so it's eventual consistency doesn't impede it's normal operations. However, the authors of the paper admit that there could be some benefit to having some sequencing guarantees that provide deterministic state transition in the network.
-
-(We could potentially allow for causal consistency in the graph view with our logs. Whether this is actually useful is questionable though.)
 
 Out of the box, ONOS has support for a distributed controller architecture. It can run on multiple servers, where each is the master OpenFlow controller for some switches, and any switch has exactly one master controller. Therefore, an ONOS instance must propagate state changes from the switches in its domain to the network of ONOS controllers. The system also aims to be scalable so that as data plane capacity grows or control plane demand increases, more ONOS instances can be created.
 
@@ -105,7 +103,7 @@ Since ONOS assigns a switch to multiple instances, and exactly one master, it al
 The data model behind the graph abstraction represents each network object in a different table. This was implemented as a means to reduce the number of updates, since a previous version stored all the network objects in a single table. 
 
 % (We could store elements of the network in separate logs, since they don't have dependencies among each other) 
-% 
+% (We could potentially allow for causal consistency in the graph view with our logs. Whether this is actually useful is questionable though.)
 % (An issue with using a fuzzy log in this system to represent network state is that polling is inefficient. The authors found that they needed to build an event notification system so that the central database wouldn't need to be polled for changes. In a fuzzy log situation, reads require going to the central database, so it may be less efficient.)
 
 <onos diagram>
@@ -118,39 +116,39 @@ The Network View API
 % 
 \subsection{OpenDaylight}
 
-The OpenDaylight defines a model driven approach for managing software defined networks. It aims to create a more modular system for SDN, where subscribers and providers for services are plugins to the system. This Model Driven Software Engineering approach creates a framework for relationships between models, standard mappings and patterns that enable model generation. An advantage of the system, therefore, is that it can create code and API's directly from models.
+The OpenDaylight defines a model driven approach for managing software defined networks. It aims to create a more modular system for SDN, where subscribers and providers for services are plugins to the system. This Model Driven Software Engineering approach creates a framework for relationships between models, standard mappings and patterns that enable model generation. An advantage of the system, therefore, is that it can create code and API's directly from models.\cite{ODL}
 
-OpenDaylight controller uses YANG as a data modeling language to specify these cross platform portable data types, which can describe network operation. While YANG was initially developed for this purpose, it effectively describes other network elements, including policy, protocol, and subscriptions to services. Rather than being an object-oriented structure, YANG is tree-structured and includes complex data types like lists and unions.
+OpenDaylight controller uses YANG as a data modeling language to specify these cross platform portable data types, which can describe network operation. While YANG was initially developed for this purpose, it effectively describes other network elements, including policy, protocol, and subscriptions to services. Rather than being an object-oriented structure, YANG is tree-structured and includes complex data types like lists and unions.\cite{yang}
 
-For example to represent a grouping of nodes in YANG:
+For example to represent a grouping of nodes in YANG:\cite{yang}
 \begin{lstlisting}
-     grouping target {
-         leaf address {
-             type inet:ip-address;
-             description "Target IP address";
-         }
-         leaf port {
-             type inet:port-number;
-             description "Target port number";
-         }
-     }
-     container peer {
-         container destination {
-             uses target;
-         }
-     }
+grouping target {
+    leaf address {
+        type inet:ip-address;
+        description "Target IP address";
+    }
+    leaf port {
+        type inet:port-number;
+        description "Target port number";
+    }
+}
+container peer {
+    container destination {
+        uses target;
+    }
+}
 \end{lstlisting}
 
-To modify the data defined by YANG, OpenDaylight uses the NETCONF and RESTCONF protocols. NETCONF is a network management protocol that defines the configuration and operations on a data store. It also has the ability to run remote procedure calls and send notifications about the underlying data. NETCONF encodes its messages and data in XML. RESTCONF is similar to NETCONF, except that it exports a REST interface over HTTP for use by external applications.
+To modify the data defined by YANG, OpenDaylight uses the NETCONF and RESTCONF protocols. NETCONF is a network management protocol that defines the configuration and operations on a data store. It also has the ability to run remote procedure calls and send notifications about the underlying data. NETCONF encodes its messages and data in XML. RESTCONF is similar to NETCONF, except that it exports a REST interface over HTTP for use by external applications.\cite{enns2011netconf}
 
-An operation configuring such a peer with NETFCONF:
+An operation configuring such a peer with NETFCONF:\cite{yang}
 \begin{lstlisting}
-     <peer>
-       <destination>
-         <address>192.0.2.1</address>
-         <port>830</port>
-       </destination>
-     </peer>
+<peer>
+  <destination>
+    <address>192.0.2.1</address>
+    <port>830</port>
+  </destination>
+</peer>
 \end{lstlisting}
 
 

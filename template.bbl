@@ -14,11 +14,23 @@
 \newblock In {\em Proceedings of the third workshop on Hot topics in software
   defined networking\/} (2014), ACM, pp.~1--6.
 
+\bibitem{jain2013network}
+{\sc Jain, R., and Paul, S.}
+\newblock Network virtualization and software defined networking for cloud
+  computing: a survey.
+\newblock {\em Communications Magazine, IEEE 51}, 11 (2013), 24--31.
+
 \bibitem{SDN}
 {\sc Jain, R., and Paul, S.}
 \newblock Network virtualization and software defined networking for cloud
   computing: a survey.
 \newblock {\em Communications Magazine, IEEE 51}, 11 (November 2013), 24--31.
+
+\bibitem{mckeown2008openflow}
+{\sc McKeown, N., Anderson, T., Balakrishnan, H., Parulkar, G., Peterson, L.,
+  Rexford, J., Shenker, S., and Turner, J.}
+\newblock Openflow: enabling innovation in campus networks.
+\newblock {\em ACM SIGCOMM Computer Communication Review 38}, 2 (2008), 69--74.
 
 \bibitem{ODL}
 {\sc Medved, J., Tkacik, A., Varga, R., and Gray, K.}

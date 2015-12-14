@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex template"] 1450071003 "template.aux" "template.bbl" "template" 1450071217
+["bibtex template"] 1450072409 "template.aux" "template.bbl" "template" 1450072410
   "/usr/local/texlive/2014/texmf-dist/bibtex/bst/base/acm.bst" 1292289607 21064 c61a48664f3c347ce7f73c1a6a530506 ""
-  "template.aux" 1450071216 1368 0957d309fcdb3a555dcce979d002db54 ""
+  "template.aux" 1450072410 1488 67722b26b63361dcdcd0f9082dee856d ""
   "template.bcf" 0 -1 0 ""
-  "template.bib" 1449845512 4677 ac0eba1cb0ebe9dba91ef0ba2f77da52 ""
+  "template.bib" 1450071875 5363 3e13c135cc2ee869081951084d672afe ""
   (generated)
   "template.blg"
   "template.bbl"
-["pdflatex"] 1450071216 "template.tex" "template.pdf" "template" 1450071217
+["pdflatex"] 1450072409 "template.tex" "template.pdf" "template" 1450072410
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -78,10 +78,10 @@
   "/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1401025944 1445653 26a0aacf3d70032b1ec192e8c7792117 ""
   "/usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt" 1401025990 3832012 904d82bdcc8abf2b1cd296990b82553b ""
   "/usr/local/texlive/2014/texmf.cnf" 1401025936 577 a59edbde8d3a8c549d0eeaab1739e2ff ""
-  "template.aux" 1450071216 1368 0957d309fcdb3a555dcce979d002db54 ""
-  "template.bbl" 1450071003 1822 3896463b605853b9c3681d991d651ffa "bibtex template"
-  "template.tex" 1450071214 17732 5244606d1c574ec272b04dc5d2e58fa5 ""
-  "template.toc" 1450071216 858 3a8dece8bc54eefd08b858b4c456cc19 ""
+  "template.aux" 1450072410 1488 67722b26b63361dcdcd0f9082dee856d ""
+  "template.bbl" 1450072409 2338 abd58058be34144bb4245764fb4384f9 "bibtex template"
+  "template.tex" 1450072403 18007 aeb3c33b254b63693cbe196e29d2688a ""
+  "template.toc" 1450072410 858 7c85efdf6ad7d01234f1ff4301e0fddb ""
   (generated)
   "template.aux"
   "template.pdf"

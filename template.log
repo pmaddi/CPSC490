@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 DEC 2015 00:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 DEC 2015 00:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -229,56 +229,58 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 70.
  [2]
-Underfull \hbox (badness 1264) in paragraph at lines 102--103
+Underfull \hbox (badness 1264) in paragraph at lines 101--102
 []\OT1/ptm/m/n/10 ONOS uses Zookeeper as a co-or-di-na-tion mech-a-
  []
 
 
-Overfull \hbox (44.159pt too wide) in paragraph at lines 131--132
+Overfull \hbox (44.159pt too wide) in paragraph at lines 130--131
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.15906pt too wide) in paragraph at lines 135--136
+Overfull \hbox (50.15906pt too wide) in paragraph at lines 134--135
 [][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 149.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 148.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 149.
- [3] [4]
-(./template.bbl
-Underfull \hbox (badness 1122) in paragraph at lines 24--28
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 148.
+ [3]
+(./template.bbl [4]
+Underfull \hbox (badness 1122) in paragraph at lines 36--40
 []\OT1/ptm/m/sc/10 Medved, J., Tkacik, A., Varga, R., and
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 24--28
+Underfull \hbox (badness 1057) in paragraph at lines 36--40
 \OT1/ptm/m/it/10 IEEE 15th In-ter-na-tional Sym-po-sium on a \OT1/ptm/m/n/10 (J
 une
  []
 
-) [5] (./template.aux) ) 
+) [5
+
+] (./template.aux) ) 
 Here is how much of TeX's memory you used:
- 3025 strings out of 493117
- 44207 string characters out of 6135433
- 115693 words of memory out of 5000000
- 6437 multiletter control sequences out of 15000+600000
+ 3027 strings out of 493117
+ 44245 string characters out of 6135433
+ 116699 words of memory out of 5000000
+ 6439 multiletter control sequences out of 15000+600000
  20439 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,32p,848b,1389s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/bas
-e/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (5 pages, 88330 bytes).
+ 38i,8n,32p,848b,1085s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on template.pdf (5 pages, 88890 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream
