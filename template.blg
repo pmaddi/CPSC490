@@ -3,44 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: template.aux
 The style file: acm.bst
 Database file #1: template.bib
-You've used 10 entries,
+Warning--entry type for "ONV:wiki" isn't style-file defined
+--line 141 of file template.bib
+Warning--to sort, need author or key in ONV:wiki
+You've used 11 entries,
             2253 wiz_defined-function locations,
-            590 strings with 5868 characters,
-and the built_in function-call counts, 4252 in all, are:
-= -- 392
-> -- 265
+            593 strings with 5925 characters,
+and the built_in function-call counts, 4404 in all, are:
+= -- 405
+> -- 266
 < -- 0
-+ -- 109
++ -- 110
 - -- 98
-* -- 370
-:= -- 696
-add.period$ -- 30
-call.type$ -- 10
-change.case$ -- 78
+* -- 376
+:= -- 711
+add.period$ -- 31
+call.type$ -- 11
+change.case$ -- 81
 chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 142
-empty$ -- 295
+cite$ -- 12
+duplicate$ -- 149
+empty$ -- 318
 format.name$ -- 98
-if$ -- 870
+if$ -- 908
 int.to.chr$ -- 0
-int.to.str$ -- 10
+int.to.str$ -- 11
 missing$ -- 10
-newline$ -- 53
+newline$ -- 56
 num.names$ -- 20
-pop$ -- 77
+pop$ -- 86
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 70
 quote$ -- 0
-skip$ -- 96
+skip$ -- 104
 stack$ -- 0
-substring$ -- 215
-swap$ -- 44
+substring$ -- 220
+swap$ -- 45
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
-warning$ -- 0
+type$ -- 44
+warning$ -- 1
 while$ -- 38
-width$ -- 12
-write$ -- 105
+width$ -- 13
+write$ -- 111
+(There were 2 warnings)

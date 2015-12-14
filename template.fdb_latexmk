@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex template"] 1450078676 "template.aux" "template.bbl" "template" 1450078678
+["bibtex template"] 1450081010 "template.aux" "template.bbl" "template" 1450081011
   "/usr/local/texlive/2014/texmf-dist/bibtex/bst/base/acm.bst" 1292289607 21064 c61a48664f3c347ce7f73c1a6a530506 ""
-  "template.aux" 1450078677 1651 97fc9bee32145de227aa7c9ab8f4f28c ""
+  "template.aux" 1450081011 1694 3ab170e1fa809d111023f292f8c346f3 ""
   "template.bcf" 0 -1 0 ""
-  "template.bib" 1450073203 5745 abee3b69a74a4006406e340d4a6ead3d ""
+  "template.bib" 1450080983 5933 905cda6378384b167aff1b72d0023e7d ""
   (generated)
   "template.blg"
   "template.bbl"
-["pdflatex"] 1450078677 "template.tex" "template.pdf" "template" 1450078678
+["pdflatex"] 1450081010 "template.tex" "template.pdf" "template" 1450081011
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -78,10 +78,10 @@
   "/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1401025944 1445653 26a0aacf3d70032b1ec192e8c7792117 ""
   "/usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt" 1401025990 3832012 904d82bdcc8abf2b1cd296990b82553b ""
   "/usr/local/texlive/2014/texmf.cnf" 1401025936 577 a59edbde8d3a8c549d0eeaab1739e2ff ""
-  "template.aux" 1450078677 1651 97fc9bee32145de227aa7c9ab8f4f28c ""
-  "template.bbl" 1450078677 2693 8a74ffdd752dbea7450d7441ac48ab8d "bibtex template"
-  "template.tex" 1450078674 18739 dde8e867e3686a474b3df7efc37029e5 ""
-  "template.toc" 1450078677 858 82b8acd385510e84152b22d24ec5f1a9 ""
+  "template.aux" 1450081011 1694 3ab170e1fa809d111023f292f8c346f3 ""
+  "template.bbl" 1450081010 2762 8348d19f41b97ce0898a3df113d18223 "bibtex template"
+  "template.tex" 1450081004 18837 29110cd9d2a925e01868d069b44be5b7 ""
+  "template.toc" 1450081011 858 82b8acd385510e84152b22d24ec5f1a9 ""
   (generated)
   "template.aux"
   "template.pdf"
