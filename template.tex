@@ -64,7 +64,7 @@ Any of these consistencies could be supported with the multiple shared log struc
 
 \section{Software Defined Networking}
 
-In general, SDN allows central control of a network. It aims to keep the complexity of the network manageable by providing abstractions for the underlying network devices. SDN provides four main advantages over traditional networks:
+In general, SDN allows central control of a network. It aims to keep the complexity of the network manageable by providing abstractions for the underlying network devices. SDN provides four main advantages over traditional networks:\cite{jain2013network}
 
 \begin{itemize}
 \item Separation of the control and data planes
@@ -78,16 +78,15 @@ Networking protocols are often arranged into data and control planes. The data p
 routing protocols such as Open Shortest Path First or Spanning Tree. A network manager might keep track of traffic statistics and the network state.
 
 With SDN, this control logic is both separate and centralized, away from the data plane. The data plane still forwards the packets using the forwarding table assigned by the control plane, but that logic is separated out into a controller. This has the added benefit of reducing the cost of the switches. SDN's centralization of control makes determining the network state faster than with standard distributed network practices, and policy changes can be propagated much faster.
-Centralized control in SDN networks also have scaling issues, and it is necessary to divide the network into subnets that can share control strategy.
+Centralized control in SDN networks also have scaling issues, and it is necessary to divide the network into subnets that can share control strategy. OpenFlow is the main southbound protocol for controllers to interact with routers and switches. It gives the controller access to the forwarding plane of the network, and provides the ability to add, modify, and remove packet matching rules and actions.\cite{mckeown2008openflow}
 
-\subsection*{OpenFlow}
-
-OpenFlow is the protocol for communicating with the routers and switches. It allows the controller to install flows in the system.
-
+% \subsection*{OpenFlow}
+% 
+% OpenFlow is the protocol for communicating with the routers and switches. It allows the controller to install flows in the system.
+% 
 \subsection{ONOS}
 
-\cite{berde2014onos}
-ONOS is an open source network ``operating system'' that aims to have distributed control of the network. Like the other systems covered here, ONOS uses the OpenFlow control-data plane interface. The overall architecture of ONOS is composed of a network view that contains a network graph abstraction, OpenFlow managers, as well as a Zookeeper registry for coordination.
+ONOS is an open source network ``operating system'' that aims to have distributed control of the network. Like the other systems covered here, ONOS uses the OpenFlow control-data plane interface. The overall architecture of ONOS is composed of a network view that contains a network graph abstraction, OpenFlow managers, as well as a Zookeeper registry for coordination. The main goal of ONOS is to provide effective network virtualization.\cite{berde2014onos}
 
 To interact with the OpenFlow interface, ONOS uses modules from Floodlight, which is another SDN implementation. This includes the switch manager, the IO loop, and link discovery. These modules as well as shared Floodlight module manager means that ONOS is slightly more compatible with other SDN controllers.
 
@@ -105,9 +104,9 @@ Since ONOS assigns a switch to multiple instances, and exactly one master, it al
 
 The data model behind the graph abstraction represents each network object in a different table. This was implemented as a means to reduce the number of updates, since a previous version stored all the network objects in a single table. 
 
-(We could store elements of the network in separate logs, since they don't have dependencies among each other) 
-
-(An issue with using a fuzzy log in this system to represent network state is that polling is inefficient. The authors found that they needed to build an event notification system so that the central database wouldn't need to be polled for changes. In a fuzzy log situation, reads require going to the central database, so it may be less efficient.)
+% (We could store elements of the network in separate logs, since they don't have dependencies among each other) 
+% 
+% (An issue with using a fuzzy log in this system to represent network state is that polling is inefficient. The authors found that they needed to build an event notification system so that the central database wouldn't need to be polled for changes. In a fuzzy log situation, reads require going to the central database, so it may be less efficient.)
 
 <onos diagram>
 
@@ -154,31 +153,22 @@ An operation configuring such a peer with NETFCONF:
      </peer>
 \end{lstlisting}
 
-<opendaylight schematic>
 
-The infrastructrue of 
+We will focus on the specific application of network virtualization in OpenDaylight.
 
-
-Service abstraction layer
-Network devices and applications go through plugins. Applications interact with the data store through RESTCONF
-Plugins can be binding aware or binding independednt 
-Datastore can be pugged into any implementation
-Can get topology information from a bgp feed
-
-
-
-Plugins?
-jpplications:
-	Bgp and topology
-	Model to model
-	Generic model adoption
-
-
-
-
-
-
-OpenDaylight network virtualization
+% <opendaylight schematic>
+% 
+% Datastore can be pugged into any implementation
+% Can get topology information from a bgp feed
+% 
+% Plugins?
+% Applications:
+% 	Bgp and topology
+% 	Model to model
+% 	Generic model adoption
+% 
+% 
+% OpenDaylight network virtualization
 
 \cite{ODL}
 

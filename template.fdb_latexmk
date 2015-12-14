@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex template"] 1450071003 "template.aux" "template.bbl" "template" 1450071004
+["bibtex template"] 1450071003 "template.aux" "template.bbl" "template" 1450071217
   "/usr/local/texlive/2014/texmf-dist/bibtex/bst/base/acm.bst" 1292289607 21064 c61a48664f3c347ce7f73c1a6a530506 ""
-  "template.aux" 1450071004 1368 0957d309fcdb3a555dcce979d002db54 ""
+  "template.aux" 1450071216 1368 0957d309fcdb3a555dcce979d002db54 ""
   "template.bcf" 0 -1 0 ""
   "template.bib" 1449845512 4677 ac0eba1cb0ebe9dba91ef0ba2f77da52 ""
   (generated)
   "template.blg"
   "template.bbl"
-["pdflatex"] 1450071003 "template.tex" "template.pdf" "template" 1450071004
+["pdflatex"] 1450071216 "template.tex" "template.pdf" "template" 1450071217
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -78,10 +78,10 @@
   "/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1401025944 1445653 26a0aacf3d70032b1ec192e8c7792117 ""
   "/usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt" 1401025990 3832012 904d82bdcc8abf2b1cd296990b82553b ""
   "/usr/local/texlive/2014/texmf.cnf" 1401025936 577 a59edbde8d3a8c549d0eeaab1739e2ff ""
-  "template.aux" 1450071004 1368 0957d309fcdb3a555dcce979d002db54 ""
+  "template.aux" 1450071216 1368 0957d309fcdb3a555dcce979d002db54 ""
   "template.bbl" 1450071003 1822 3896463b605853b9c3681d991d651ffa "bibtex template"
-  "template.tex" 1450071000 17633 57c87c74aa858b6d6147e0e719b15ecd ""
-  "template.toc" 1450071004 858 3a8dece8bc54eefd08b858b4c456cc19 ""
+  "template.tex" 1450071214 17732 5244606d1c574ec272b04dc5d2e58fa5 ""
+  "template.toc" 1450071216 858 3a8dece8bc54eefd08b858b4c456cc19 ""
   (generated)
   "template.aux"
   "template.pdf"
