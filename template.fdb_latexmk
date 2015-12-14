@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex template"] 1450032956 "template.aux" "template.bbl" "template" 1450035587
+["bibtex template"] 1450042824 "template.aux" "template.bbl" "template" 1450042825
   "/usr/local/texlive/2014/texmf-dist/bibtex/bst/base/acm.bst" 1292289607 21064 c61a48664f3c347ce7f73c1a6a530506 ""
-  "template.aux" 1450032957 1278 bb156eaf3dcbb0c10990895795016e2f ""
+  "template.aux" 1450042825 1438 ce94df84dfb31cf3e499d40271d810d3 ""
   "template.bcf" 0 -1 0 ""
   "template.bib" 1449845512 4677 ac0eba1cb0ebe9dba91ef0ba2f77da52 ""
   (generated)
   "template.blg"
   "template.bbl"
-["pdflatex"] 1450032956 "template.tex" "template.pdf" "template" 1450035587
+["pdflatex"] 1450042824 "template.tex" "template.pdf" "template" 1450042825
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -74,10 +74,10 @@
   "/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1401025944 1445653 26a0aacf3d70032b1ec192e8c7792117 ""
   "/usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt" 1401025990 3832012 904d82bdcc8abf2b1cd296990b82553b ""
   "/usr/local/texlive/2014/texmf.cnf" 1401025936 577 a59edbde8d3a8c549d0eeaab1739e2ff ""
-  "template.aux" 1450032957 1278 bb156eaf3dcbb0c10990895795016e2f ""
-  "template.bbl" 1450032956 1822 3896463b605853b9c3681d991d651ffa "bibtex template"
-  "template.tex" 1450032938 14591 808d7f78dfb9a1c53eceb6e4fc1abe7c ""
-  "template.toc" 1450032957 786 a1f3e63cdcf64decb995c222f907c672 ""
+  "template.aux" 1450042825 1438 ce94df84dfb31cf3e499d40271d810d3 ""
+  "template.bbl" 1450042824 1822 3896463b605853b9c3681d991d651ffa "bibtex template"
+  "template.tex" 1450042819 15792 faf2ae15750e3486d68f68f4bcb59d21 ""
+  "template.toc" 1450042825 910 63f9bbbe4ba245b8c5d0bdaf2bf7cdf2 ""
   (generated)
   "template.aux"
   "template.pdf"
