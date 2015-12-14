@@ -152,12 +152,12 @@ An operation configuring such a peer with NETFCONF:\cite{yang}
 \end{lstlisting}
 
 
-We will focus on the specific application of network virtualization in OpenDaylight. The network virtualization libarary of OpenDaylight comes packaged with the ODL Controller Platform and provides the functionality to run multiple controller nodes in a logically centralized manner \cite{ONV:wiki}. This virtualization services allow machines to be grouped into virtual network segments (VNS) which can be used to logically segment a network acorrding to a specialized use case. Some advantages of doing this include sharing of resources, isolation, agregration of resources, and increased ease of management \cite{jain2013network}.
+We will focus on the specific application of network virtualization in OpenDaylight. The network virtualization libarary of OpenDaylight comes packaged with the ODL Controller Platform and provides the functionality to run multiple controller nodes in a logically centralized manner \cite{ONV:wiki}. Just as with ONOS, each switch in the system is assigned a leader controller.This virtualization services allow machines to be grouped into virtual network segments (VNS) which can be used to logically segment a network acorrding to a specialized use case. Some advantages of doing this include sharing of resources, isolation, agregration of resources, and increased ease of management \cite{jain2013network}.
+
+Of the network functions served by the ODL controller, which include a statistics manager, forwarding rules manager, and an inventory manager, the topology service is of particular importance for network virtualization becuase it is required to translate virtual routing descisions to network flows \cite{jain2013network}. To achieve this, the system stores the messages from BGP-LS and passes them to the Topology Exporter that generates that makes available the
+topology of the controller's switchces via RESTCONF. This system produces a reliable network view in the case of a single controller, but becomes more complicated if more than one controller is used, since the sub-network views must be constructed into the global view to make flow descisions \cite{bgp:rfc}.
 
 
-
-
-% <opendaylight schematic>
 % 
 % Datastore can be pugged into any implementation
 % Can get topology information from a bgp feed
