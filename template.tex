@@ -168,23 +168,22 @@ In both ONOS and OpenDaylight, the graph topology information stored by the node
 Imagine a network configuration with two groups that must be kept separate---Imagine that North and South Korea are on the same SDN network, and we want no packets to flow between the North Korea Virtual Network Segement and the South Korea VNS. In this case, imagine the following occurs:
 
 \begin{description}
-\item [Event 1] Switch A connects to the South Korea VNS.
-\item [Event 2] Switch A connects to the North Korea VNS.
-\item [Event 3] Switch A disconnects to the South Korea VNS.
+\item [Event 1] Switch A connects to a controller in the South Korea VNS.
+\item [Event 2] Switch A connects to a controller in the North Korea VNS.
+\item [Event 3] Switch A disconnects to the the South Korea VNS controller.
 \end{description}
 
 Instead, with eventual consistency over the topology, the following ordering of events could be observed:
 
 \begin{description}
-\item [Event 1] Switch A connects to the South Korea VNS.
-\item [Event 3] Switch A disconnects to the South Korea VNS.
-\item [Event 2] Switch A connects to the North Korea VNS.
+\item [Event 1] Switch A connects to a controller in the South Korea VNS.
+\item [Event 3] Switch A disconnects to the South Korea VNS controller.
+\item [Event 2] Switch A connects to a controller in the North Korea VNS.
 \end{description}
 
-Therefore, before it is possble for the network virtualizaton application to observe after the disconnection event that the Switch is disconnected from the South Korean VNS. In reality, however, the switch is connected to both the South Korean and North Korean VNS's.
+Which the virtualization service deems valid.
 
-In particular, this could be important for effcective separation of regions in network virtualization situations.
-
+Therefore, before it is possble for the network virtualizaton application to observe after the disconnection event that the Switch is disconnected from the South Korean VNS. In reality, however, the switch is connected to both the South Korean and North Korean VNS's. As we can see, eventual consistency leaves something to be desired when virtualzing a network.
 
 
 \subsection{Coordination}
