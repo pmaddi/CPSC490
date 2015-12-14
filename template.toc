@@ -4,11 +4,9 @@
 \contentsline {section}{\numberline {2}Software Defined Networking}{2}
 \contentsline {subsection}{\numberline {2.1}ONOS}{2}
 \contentsline {subsection}{\numberline {2.2}OpenDaylight}{3}
-\contentsline {subsection}{\numberline {2.3}Comparison of SDN systems}{4}
-\contentsline {section}{\numberline {3}Common Data Structures}{4}
-\contentsline {section}{\numberline {4}Proposed SDN extensions}{4}
-\contentsline {subsection}{\numberline {4.1}Georeplication}{4}
-\contentsline {subsection}{\numberline {4.2}Coordination}{4}
-\contentsline {subsection}{\numberline {4.3}ONOS}{5}
-\contentsline {subsection}{\numberline {4.4}OpenDaylight}{5}
-\contentsline {section}{\numberline {5}Conclusion}{5}
+\contentsline {section}{\numberline {3}Proposed SDN extensions}{4}
+\contentsline {subsection}{\numberline {3.1}Georeplication}{4}
+\contentsline {subsection}{\numberline {3.2}Coordination}{4}
+\contentsline {subsection}{\numberline {3.3}ONOS}{4}
+\contentsline {subsection}{\numberline {3.4}OpenDaylight}{4}
+\contentsline {section}{\numberline {4}Conclusion}{4}
