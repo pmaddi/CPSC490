@@ -123,9 +123,8 @@ The OpenDaylight defines a model driven approach for managing software defined n
 
 OpenDaylight controller uses YANG as a data modeling language to specify these cross platform portable data types, which can describe network operation. While YANG was initially developed for this purpose, it effectively describes other network elements, including policy, protocol, and subscriptions to services. Rather than being an object-oriented structure, YANG is tree-structured and includes complex data types like lists and unions.
 
-<yang example>
+For example to represent a grouping of nodes in YANG:
 \begin{lstlisting}
-
      grouping target {
          leaf address {
              type inet:ip-address;
@@ -136,15 +135,17 @@ OpenDaylight controller uses YANG as a data modeling language to specify these c
              description "Target port number";
          }
      }
-
      container peer {
          container destination {
              uses target;
          }
      }
+\end{lstlisting}
 
-   NETCONF XML Example:
+To modify the data defined by YANG, OpenDaylight uses the NETCONF and RESTCONF protocols. NETCONF is a network management protocol that defines the configuration and operations on a data store. It also has the ability to run remote procedure calls and send notifications about the underlying data. NETCONF encodes its messages and data in XML. RESTCONF is similar to NETCONF, except that it exports a REST interface over HTTP for use by external applications.
 
+An operation configuring such a peer with NETFCONF:
+\begin{lstlisting}
      <peer>
        <destination>
          <address>192.0.2.1</address>
@@ -152,9 +153,6 @@ OpenDaylight controller uses YANG as a data modeling language to specify these c
        </destination>
      </peer>
 \end{lstlisting}
-
-
-To modify the data defined by YANG, OpenDaylight uses the NETCONF and RESTCONF protocols. NETCONF is a network management protocol that defines the configuration and operations on a data store. It also has the ability to run remote procedure calls and send notifications about the underlying data. NETCONF encodes its messages and data in XML. RESTCONF is similar to NETCONF, except that it exports a REST interface over HTTP for use by external applications.
 
 <opendaylight schematic>
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 DEC 2015 00:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 DEC 2015 00:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -73,12 +73,32 @@ Package: times 2005/04/12 PSNFSS-v9.2a (SPQR)
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listing/listing.sty
-Package: listing 1999/05/25
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count89
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count90
+\lst@currlwidth=\dimen108
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen109
+\lst@width=\dimen110
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen111
 
-Package `listing', V1.2, <1999/05/25>
-\c@listing=\count89
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box27
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
@@ -88,8 +108,8 @@ Package color Info: Driver file: pdftex.def on input line 137.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks15
-\verbatim@line=\toks16
+\every@verbatim=\toks16
+\verbatim@line=\toks17
 \verbatim@in@stream=\read1
 )
 (./template.aux)
@@ -112,17 +132,17 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 16.
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count90
-\scratchdimen=\dimen108
-\scratchbox=\box26
-\nofMPsegments=\count91
-\nofMParguments=\count92
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count93
-\MPscratchDim=\dimen109
-\MPnumerator=\count94
-\makeMPintoPDFobject=\count95
-\everyMPtoPDFconversion=\toks18
+\scratchcounter=\count97
+\scratchdimen=\dimen112
+\scratchbox=\box28
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen113
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks19
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -171,6 +191,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@lstlisting=\count103
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -213,31 +234,24 @@ Underfull \hbox (badness 1264) in paragraph at lines 102--103
  []
 
 
-! LaTeX Error: Environment lstlisting undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.127 \begin{lstlisting}
-                        
-? 
-
-! LaTeX Error: \begin{document} ended by \end{lstlisting}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154 \end{lstlisting}
-                      
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--155
-[]\OT1/ptm/m/n/10 <peer> <des-ti-na-tion> <ad-dress>192.0.2.1</address>
+Overfull \hbox (44.159pt too wide) in paragraph at lines 132--133
+[][][][][][][][][][][][] 
  []
 
-[3] (./template.bbl [4]
+
+Overfull \hbox (50.15906pt too wide) in paragraph at lines 136--137
+[][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 148.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 148.
+ [3] [4]
+(./template.bbl
 Underfull \hbox (badness 1122) in paragraph at lines 24--28
 []\OT1/ptm/m/sc/10 Medved, J., Tkacik, A., Varga, R., and
  []
@@ -248,25 +262,23 @@ Underfull \hbox (badness 1057) in paragraph at lines 24--28
 une
  []
 
-) [5
-
-] (./template.aux) ) 
+) [5] (./template.aux) ) 
 Here is how much of TeX's memory you used:
- 1850 strings out of 493117
- 26828 string characters out of 6135433
- 89842 words of memory out of 5000000
- 5272 multiletter control sequences out of 15000+600000
+ 3025 strings out of 493117
+ 44207 string characters out of 6135433
+ 118693 words of memory out of 5000000
+ 6437 multiletter control sequences out of 15000+600000
  20439 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,23p,848b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r
-.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (5 pages, 86647 bytes).
+ 38i,8n,32p,848b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/bas
+e/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on template.pdf (5 pages, 88250 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream

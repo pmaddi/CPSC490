@@ -32,8 +32,12 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
-INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listing/listing.sty
-INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listing/listing.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
@@ -112,6 +116,8 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
 INPUT template.bbl
 INPUT template.bbl
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
