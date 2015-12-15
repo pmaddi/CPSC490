@@ -214,11 +214,14 @@ Therefore, before it is possble for the network virtualizaton application to obs
 
 To enforce the global invariants required of the VNS isolaton, a simple solution is to simply require strong consistency over the link-state graph views \cite{bgp:rfc}. This could be implemented by having a Paxos-like service that requires majority consensus to make link-state changes. Then, installed isolation rules could be guaranteed over the network view.
 
-Could using a shared-log approach to causal ordering guarantees be useful?
+Could using a shared-log approach to causal ordering guarantees be useful? As 
 
-% \subsection{Coordination}
-% Is this a global invariant that any switch cannot be part of the South and North Korea VNS's? If so, supporting causal consistency of the graph operations wouldn't do much to prevent such an attack on the system. 
-% Different netowrk elements only work with their own data.
+\subsection{Coordination}
+ Is this a global invariant that any switch cannot be part of the South and North Korea VNS's? If so, supporting causal consistency of the graph operations wouldn't do much to prevent such an attack on the system. 
+
+ Different netowrk elements only work with their own data.
+
+ The shared-log model of ZooKeeper could be very useful in the case of nework separation. If the durable store were maintained at each VNS, then inventory managment could be logically segmented into 
 
 \subsection{ONOS}
 
