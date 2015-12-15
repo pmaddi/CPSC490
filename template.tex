@@ -184,7 +184,7 @@ Of the network functions served by the ODL controller, which include a statistic
 
 There are two main representations of state in the systems we have discussed. There is a coordination service ONOS that maintains the naming and other information that must be stored by the controllers. Also, there is a representaion of the graph topology that each controller must learn from the physical switches under its domain. Then, to generate the full topology of the network, these subnetwork topologies must be assembled in the full network view.
 
-\subsection{Georeplication}
+\subsection{Topology}
 
 In both ONOS, the graph topology information stored by the controllers is eventually consistent. The ONOS paper suggests that this is "good enough" for traditional netowrking, and presumably good enough for their applications \cite{berde2014onos}. 
 
@@ -213,14 +213,13 @@ Which the virtualization service would deem valid after Event 3.
 Therefore, before it is possble for the network virtualizaton application to observe after the disconnection event that Alice is disconnected from the Enginerring VNS. In reality, however, Alice is connected to both the Engineering and Accounting VNS's. Clearly, in this case, some security measures could be installed to prevent such attacks on the network such as requiring authentiction or ACL's---But it does illustrate that only eventual consistency leaves something to be desired when virtualzing a network. Such problems compound when we try to build larger scale geo-distrubuted virtualized networks, since correlated network splits and latency issues are compounded.
 
 To enforce the global invariants required of the VNS isolaton, a simple solution is to simply require strong consistency over the link-state graph views \cite{bgp:rfc}. This could be implemented by having a Paxos-like service that requires majority consensus to make link-state changes. Then, installed isolation rules could be guaranteed over the network view. This is not an unreasonable consideration---ONOS already maintains global coordination state about the in
-controller-switch relationships in ZooKeeper.
-about the primarily about 
+controller-switch relationships in ZooKeeper. Such a coordination service is not included in the OpenDaylight network virtualization system. So adding this would increase the system complexity and reduce the efficency of the network.
 
-Could using a shared-log approach to causal ordering guarantees be useful? As 
+(Could using a shared-log approach to causal ordering guarantees be useful? Perhaps we could use this to enforce strong consistency in each controller's sub-network and define dependencies between them.)
 
 \subsection{Coordination}
 
-ONOS maintains a 
+ONOS maintains a ZooKeeper 
 
  Is this a global invariant that any switch cannot be part of the South and North Korea VNS's? If so, supporting causal consistency of the graph operations wouldn't do much to prevent such an attack on the system. 
 
@@ -228,23 +227,23 @@ ONOS maintains a
 
  The shared-log model of ZooKeeper could be very useful in the case of nework separation. If the durable store were maintained at each VNS, then inventory managment could be logically segmented into 
 
-\subsection{ONOS}
-
-make graph structure causally consistent (topology representations with a log backing...)
-
-build a log based event notification system?
-
-causal graph system
-    eventual consistency does not seem to affect the control plane behavior in traditional applications
-
-adjacency matrix of the graph in the logs
-
-causal coordination system since there are diffrent network elements
-
-maintian separations of the topology graph with adjancency in the runtime
-\subsection{OpenDaylight}
-
-OpenDaylight's modularity and data store agnostic setup makes it well suited for weakly consistent structures.
+% \subsection{ONOS}
+% 
+% make graph structure causally consistent (topology representations with a log backing...)
+% 
+% build a log based event notification system?
+% 
+% causal graph system
+%     eventual consistency does not seem to affect the control plane behavior in traditional applications
+% 
+% adjacency matrix of the graph in the logs
+% 
+% causal coordination system since there are diffrent network elements
+% 
+% maintian separations of the topology graph with adjancency in the runtime
+% \subsection{OpenDaylight}
+% 
+% OpenDaylight's modularity and data store agnostic setup makes it well suited for weakly consistent structures.
 
 \section{Conclusion}
 
