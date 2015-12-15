@@ -184,7 +184,7 @@ Of the network functions served by the ODL controller, which include a statistic
 
 There are two main representations of state in the systems we have discussed. There is a coordination service ONOS that maintains the naming and other information that must be stored by the controllers. Also, there is a representaion of the graph topology that each controller must learn from the physical switches under its domain. Then, to generate the full topology of the network, these subnetwork topologies must be assembled in the full network view.
 
-\subsection{Topology}
+\subsection{Isolation}
 
 In both ONOS, the graph topology information stored by the controllers is eventually consistent. The ONOS paper suggests that this is "good enough" for traditional netowrking, and presumably good enough for their applications \cite{berde2014onos}. 
 
@@ -217,7 +217,7 @@ controller-switch relationships in ZooKeeper. Such a coordination service is not
 
 (Could using a shared-log approach to causal ordering guarantees be useful? Perhaps we could use this to enforce strong consistency in each controller's sub-network and define dependencies between them.)
 
-\subsection{Coordination}
+\subsection{Fault tolerance}
 
 ONOS maintains a ZooKeeper 
 
