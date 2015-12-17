@@ -52,6 +52,19 @@ Using a shared log makes strongly consistent operations easier than they would b
 
 The shared log abstraction represents a total ordering of the updates added to the log. This abstraction is a common way to organize changes to a file system, for instance \cite{Log}. By definition, this means that it is a set with a relation that satisfies reflexivity, transitivity and symmetry, where any two items can be compared. On the other hand, we want to represent a partial ordering of the updates so that we can allow the user the flexibility of not relying on other users writes. A directed acyclic graph is a data structure that can represent partial ordering relations. Initially, we considered using a shared DAG as a representation of state in the system. However, this seemed to leave the system too unconstrained since it would be difficult to maintain ordering across nodes and read forward to get new data. 
 
+The shared log runtime exposes the following API:
+
+\begin{itemize}
+
+\item \verb_runtime.append(id, {dependencies}, data)_ \verb_ -> index_ Adds an entry to column id with containing data with dependency set \verb_{dependencies}_ and returns the index at which the entry was written
+
+\item \verb~runtime.read_next(id)~ \verb~-> Option index~ Attempts to read one unread entry from column id, along with all unseen dependencies of said entry, and if an entry was read returns its index
+
+\item \verb~runtime.play_foward(id)~ \verb~ −> Option (index, index)~ Reads all unseen en- tries for a given column, along with their dependencies, returning the first and last indices read.
+
+\end{itemize}
+
+
 \subsection{Consistency}
 
 Not all applications require a strong consistency guarantee. Depending on the particular application, lower latency reads or the ability to write immediately could be preferred. We would like to enable our users to select what level of consistency works for them. Rather than have the consistency level be specified at development time, we would like to support this at the API level. By having something like a Service Level Agreement specified within the update\_helper and query\_helper, the client could configure the guarantee that works best in the situation. The SLA specified would then inform where in the DAG to place the update. The motivation for such a system is that different procedures in an application can have different guarantee requirements.
