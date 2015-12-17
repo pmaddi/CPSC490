@@ -3,51 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: template.aux
 The style file: acm.bst
 Database file #1: template.bib
-Warning--I didn't find a database entry for "hunt2010zookeeper"
-Warning--I didn't find a database entry for "brewer2000towards"
 Warning--to sort, need author or key in ONV:wiki
 Warning--empty author in ONV:wiki
 Warning--empty journal in ONV:wiki
 Warning--empty journal in bgp:rfc
-You've used 12 entries,
+You've used 14 entries,
             2253 wiz_defined-function locations,
-            598 strings with 6049 characters,
-and the built_in function-call counts, 4562 in all, are:
-= -- 422
-> -- 273
+            608 strings with 6282 characters,
+and the built_in function-call counts, 5179 in all, are:
+= -- 473
+> -- 302
 < -- 0
-+ -- 113
-- -- 100
-* -- 387
-:= -- 747
-add.period$ -- 33
-call.type$ -- 12
-change.case$ -- 85
++ -- 125
+- -- 110
+* -- 431
+:= -- 845
+add.period$ -- 39
+call.type$ -- 14
+change.case$ -- 96
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 157
-empty$ -- 321
-format.name$ -- 100
-if$ -- 932
+cite$ -- 18
+duplicate$ -- 189
+empty$ -- 381
+format.name$ -- 110
+if$ -- 1065
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 12
-newline$ -- 60
-num.names$ -- 22
-pop$ -- 85
+int.to.str$ -- 14
+missing$ -- 14
+newline$ -- 70
+num.names$ -- 26
+pop$ -- 104
 preamble$ -- 1
-purify$ -- 73
+purify$ -- 82
 quote$ -- 0
-skip$ -- 106
+skip$ -- 123
 stack$ -- 0
-substring$ -- 225
-swap$ -- 45
+substring$ -- 237
+swap$ -- 51
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
+type$ -- 56
 warning$ -- 4
-while$ -- 40
-width$ -- 14
-write$ -- 117
-(There were 6 warnings)
+while$ -- 45
+width$ -- 16
+write$ -- 138
+(There were 4 warnings)

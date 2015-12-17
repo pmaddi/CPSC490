@@ -17,10 +17,20 @@ Opendaylight network virtualization (onv).
 \newblock In {\em Proceedings of the third workshop on Hot topics in software
   defined networking\/} (2014), ACM, pp.~1--6.
 
+\bibitem{brewer2000towards}
+{\sc Brewer, E.~A.}
+\newblock Towards robust distributed systems.
+\newblock In {\em PODC\/} (2000), vol.~7.
+
 \bibitem{enns2011netconf}
 {\sc Enns, R., Bjorklund, M., and Schoenwaelder, J.}
 \newblock Netconf configuration protocol.
 \newblock {\em Network\/} (2011).
+
+\bibitem{hunt2010zookeeper}
+{\sc Hunt, P., Konar, M., Junqueira, F.~P., and Reed, B.}
+\newblock Zookeeper: Wait-free coordination for internet-scale systems.
+\newblock In {\em USENIX Annual Technical Conference\/} (2010), vol.~8, p.~9.
 
 \bibitem{jain2013network}
 {\sc Jain, R., and Paul, S.}
