@@ -5,6 +5,6 @@
 \contentsline {subsection}{\numberline {2.1}ONOS}{2}
 \contentsline {subsection}{\numberline {2.2}OpenDaylight}{3}
 \contentsline {section}{\numberline {3}Proposed SDN extensions}{4}
-\contentsline {subsection}{\numberline {3.1}Topology}{4}
-\contentsline {subsection}{\numberline {3.2}Coordination}{5}
+\contentsline {subsection}{\numberline {3.1}Isolation}{4}
+\contentsline {subsection}{\numberline {3.2}Fault tolerance}{5}
 \contentsline {section}{\numberline {4}Conclusion}{5}
