@@ -260,11 +260,7 @@ distribute nib
         map swtich database to NIB entries
         any southbound interface
 
-
-
-
 \subsection*{Flow policies and forwarding behavior}
-
 
 (Partitioning the flow-processing state requires that all controllers be able to set up paths in the network, end to end. Therefore, each Onix instance needs to know the location of all end-points as well as the link state of the network. However, it is not particularly important that this information be strongly consistent between controllers. At worst, a flow is routed to an old location of the host over a failed link, which is impossible to avoid during network element failures.
 It is also unnecessary for the link state to be persistent, since this information is obtained dynamically. Therefore, the controllers can use the DHT for storing link-state, which allows tens of thousands of updates per second (see Section 7).)
@@ -273,8 +269,7 @@ user rules
 
 \subsection*{Notifications}
 data change notification
-
-    
+  
 %\subsection{Network function virtualization}
 %\subsection{Network virtualization}
 
@@ -283,6 +278,7 @@ data change notification
 There are two main representations of state in the systems we have discussed. There is a coordination service ONOS that maintains the naming and other information that must be stored by the controllers. Also, there is a representaion of the graph topology that each controller must learn from the physical switches under its domain. Then, to generate the full topology of the network, these subnetwork topologies must be assembled in the full network view.
 
 Consistency, durability, isolation etc requirements for each element of data
+
 \subsection{Isolation}
 
 In both ONOS, the graph topology information stored by the controllers is eventually consistent. The ONOS paper suggests that this is "good enough" for traditional netowrking, and presumably good enough for their applications \cite{berde2014onos}. 
