@@ -232,13 +232,21 @@ logic. Newer systems such as OpenDaylight and ONOS tend to give the application 
 
 \subsection*{Inventory}
 
-The main objects that the SDN controllers must track are the topological network elements and the controller nodes. 
-topo inventiry and node inventory
-\cite{network2015topologies}
-( Furthermore, a network contains an inventory of nodes that are part of the network. The nodes of a network are captured in their own list. Each node is identified relative to its containing network by a node-id.
+The main objects that the SDN controllers must track are the topological network elements and the controller nodes \cite{network2015topologies}.
 
+Depending on how the controller aggregates network elements, this state can be represented in a few ways. ODL 
+( Furthermore, a network contains an inventory of nodes that are part of the network. The nodes of a network are captured in their own list. Each node is identified relative to its containing network by a node-id.  )
 
+(The first part of the model defines a network model that allows to define network hierarchies (i.e. network stacks) and to maintain an inventory of nodes contained in a network. The second part of the model augments the basic network model withinformation to describe topology information.  Specifically, it addsthe concepts of links and termination points to describe how nodes ina network are connected to each other.  Moreover the model introducesvertical layering relationships between networks that can beaugmented to cover both network inventories and network/servicetopologies.
+
+While it would be possible to combine both parts into a single model,the separation facilitates integration of network topology andnetwork inventory models, by allowing to augment network inventoryinformation separately and without concern for topology into thenetwork model.
 )
+
+ownership information
+consistency
+    zookeeper for coordination
+    but most prefer the transactions of transactional database on the NIB
+
 \subsection*{Topology}
 igp topo, l3 unicast, ospf, isis
 generalized aggregetation as overlay networks
@@ -258,12 +266,15 @@ distribute nib
         map swtich database to NIB entries
         any southbound interface
 
-\subsection*{Coordination}
-ownership information
-consistency
-    zookeeper for coordination
-    but most prefer the transactions of transactional database on the NIB
+
+
+
+
 \subsection*{Link state}
+
+
+
+
 \subsection*{Flow policies}
 
 
@@ -271,6 +282,10 @@ consistency
 It is also unnecessary for the link state to be persistent, since this information is obtained dynamically. Therefore, the controllers can use the DHT for storing link-state, which allows tens of thousands of updates per second (see Section 7).)
 
 user rules
+
+
+
+
 \subsection*{Notifications}
 data change notification
 
