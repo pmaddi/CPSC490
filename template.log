@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 04:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 08:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -214,47 +214,47 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 40.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 39.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 54.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 53.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
 
-Overfull \hbox (34.15628pt too wide) in paragraph at lines 54--55
+Overfull \hbox (34.15628pt too wide) in paragraph at lines 53--54
 [][]\OT1/pcr/m/n/10 runtime.append(id, {dependencies}, data)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 [] \OT1/pcr/m/n/10 -> index \OT1/ptm/m/n/10 Adds an en-try to col-umn id
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 \OT1/ptm/m/n/10 with con-tain-ing data with de-pen-dency set
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 54--55
+Underfull \hbox (badness 3977) in paragraph at lines 53--54
 []\OT1/pcr/m/n/10 {dependencies} \OT1/ptm/m/n/10 and re-turns the in-dex at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 [][]\OT1/pcr/m/n/10 runtime.read_next(id)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 []\OT1/pcr/m/n/10 -> Option index \OT1/ptm/m/n/10 At-tempts to read one
  []
 
@@ -262,49 +262,49 @@ Missing character: There is no â in font pcrr7t!
 Missing character: There is no ˆ in font pcrr7t!
 Missing character: There is no ’ in font pcrr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 [][]\OT1/pcr/m/n/10 runtime.play_foward(id)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 [] \OT1/pcr/m/n/10 > Option (index, index) \OT1/ptm/m/n/10 Reads all
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 58--59
+Underfull \hbox (badness 1546) in paragraph at lines 57--58
 \OT1/ptm/m/n/10 their de-pen-den-cies, re-turn-ing the first and last
  []
 
 [2]
-Underfull \hbox (badness 1264) in paragraph at lines 116--117
+Underfull \hbox (badness 1264) in paragraph at lines 115--116
 []\OT1/ptm/m/n/10 ONOS uses Zookeeper as a co-or-di-na-tion mech-a-
  []
 
 
-Overfull \hbox (14.15869pt too wide) in paragraph at lines 145--146
+Overfull \hbox (14.15869pt too wide) in paragraph at lines 144--145
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.15875pt too wide) in paragraph at lines 149--150
+Overfull \hbox (20.15875pt too wide) in paragraph at lines 148--149
 [][][][][][][][][][][][] 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 []\OT1/ptm/m/n/10 An op-er-a-tion con-fig-ur-ing such a peer with
  []
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 163.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 162.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 163.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 162.
  [4] [5]
-Underfull \hbox (badness 1558) in paragraph at lines 289--291
+Underfull \hbox (badness 1558) in paragraph at lines 288--290
 \OT1/ptm/m/n/10 could be im-ple-mented by hav-ing a Paxos-like ser-
  []
 

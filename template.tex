@@ -100,6 +100,22 @@ Centralized control in SDN networks also have scaling issues, and it is necessar
 % 
 % OpenFlow is the protocol for communicating with the routers and switches. It allows the controller to install flows in the system.
 % 
+\subsection{ONIX}
+
+ONIX was the first of these distributed SDN controllers to be released with the goal of providing networking management view abstractions apart from NOX, which did not address reliability or scalibility concerns \cite{feamster2014road}. ONIX also provides a more general API than it's predicesors, along with the felxibility to connect to general datastores and southbound protocols \cite{koponen2010onix}.
+
+ONIX consists of the unerlying physical infrastructure that needs to be managed, connectivity infrasctructure, Onix controllers, and the application logic. The system also introduces the idea of the Network Information Base (NIB) which extends the idea of the Routing Information Base to include a graph of the network topology. This topology is how applications primarily interact with the system, both for modifying and accessing network state. Therefore, much care is taken to allow the application to distribute this information and replicate it among the controllers.
+
+The NIB provides methods for the applicaiton logic to modify the network elements through an index of the network elements, as well as a notification system to asynchronously alert the appliation of state changes of watched network elements. When making these state changes, the system doesn't allow locking across the system, but only on the local controller without guarantees on the global state by default. 
+
+To add some level of consistency to sets of updates that might have dependencies on one another, ONIX provides a synchronization primative. Though all operations are asynchronous, this primitive allows callbacks to be executed once a change propagated to avoid race conditions.
+
+To improve the scalablity of the system, the controller logic can be is partitioned over multiple Onix controllers depending on the application requirements. This is handled in two ways: dividing the network traffic in case the forwarding state entries exceed the memory on single controllers, and dividing the NIB over the controllers too if its representaion cannot fit in memory. Generally, the full NIB can fit in memory and writes are rare, so it ist stored in the fully replicted datastore across all controllers. The link utilization, however, is always changing and is stored in a DHT with weaker consistency guarantees.
+
+Another way the systems aims to improve performance is by aggregating each subset of network elements managed by each Onix node into single nodes. Then, the topology can be represented by the links amongnetwork subsets. This avoids spamming external CPUs with high rates of network events since there are fewer links to describe. A downside to this is that the DHT outside of the subset would only have link-utilization for the aggregated topology. To increase performance from this point, the systems would need partition the NIB over controllers.
+
+To increase the reliablity of the sysetm, Onix deals with four types of network failure: forwarding failure, link failure, Onix instance failure, and network connectivity failure. To deal with forwarding and link failures, the controllers direct traffic around the failures. These failures are disseminated as updates to the topology and force recomputation of the forwarding failures. When an Onix controller fails, the Zookeeper coordination service sees that the failure happened by the lack of a keep-alive heartbeat. Then, the node responsibilities are pawned off as needed. The controllers must also resolve race conditions that may have occured from incompletely written state.
+    
 \subsection{ONOS}
 
 ONOS is an open source network ``operating system'' that aims to have distributed control of the network. Like the other systems covered here, ONOS uses the OpenFlow control-data plane interface. The overall architecture of ONOS is composed of a network view that contains a network graph abstraction, OpenFlow managers, as well as a Zookeeper registry for coordination. The main goal of ONOS is to provide effective network virtualization.\cite{berde2014onos}
@@ -172,22 +188,6 @@ We will focus on the specific application of network virtualization in OpenDayli
 
 Of the network functions served by the ODL controller, which include a statistics manager, forwarding rules manager, and an inventory manager, the topology service is of particular importance for network virtualization becuase it is required to translate virtual routing descisions to network flows \cite{jain2013network}. To achieve this, the system stores the messages from BGP-LS and passes them to the Topology Exporter that generates that makes available the topology of the controller's switchces via RESTCONF. The topology includes the connections between nodes, routers, switches, hosts and various appliances of the netowork. This system produces a reliable network view in the case of a single controller, but becomes more complicated if more than one controller is used, since the sub-network views must be constructed into the global view to make flow descisions \cite{bgp:rfc}.
 
-\subsection{ONIX}
-
-ONIX was the first of these distributed SDN controllers to be released with the goal of providing networking management view abstractions apart from NOX, which did not address reliability or scalibility concerns \cite{feamster2014road}. ONIX also provides a more general API than it's predicesors, along with the felxibility to connect to general datastores and southbound protocols \cite{koponen2010onix}.
-
-ONIX consists of the unerlying physical infrastructure that needs to be managed, connectivity infrasctructure, Onix controllers, and the application logic. The system also introduces the idea of the Network Information Base (NIB) which extends the idea of the Routing Information Base to include a graph of the network topology. This topology is how applications primarily interact with the system, both for modifying and accessing network state. Therefore, much care is taken to allow the application to distribute this information and replicate it among the controllers.
-
-The NIB provides methods for the applicaiton logic to modify the network elements through an index of the network elements, as well as a notification system to asynchronously alert the appliation of state changes of watched network elements. When making these state changes, the system doesn't allow locking across the system, but only on the local controller without guarantees on the global state by default. 
-
-To add some level of consistency to sets of updates that might have dependencies on one another, ONIX provides a synchronization primative. Though all operations are asynchronous, this primitive allows callbacks to be executed once a change propagated to avoid race conditions.
-
-To improve the scalablity of the system, the controller logic can be is partitioned over multiple Onix controllers depending on the application requirements. This is handled in two ways: dividing the network traffic in case the forwarding state entries exceed the memory on single controllers, and dividing the NIB over the controllers too if its representaion cannot fit in memory. Generally, the full NIB can fit in memory and writes are rare, so it ist stored in the fully replicted datastore across all controllers. The link utilization, however, is always changing and is stored in a DHT with weaker consistency guarantees.
-
-Another way the systems aims to improve performance is by aggregating each subset of network elements managed by each Onix node into single nodes. Then, the topology can be represented by the links amongnetwork subsets. This avoids spamming external CPUs with high rates of network events since there are fewer links to describe. A downside to this is that the DHT outside of the subset would only have link-utilization for the aggregated topology. To increase performance from this point, the systems would need partition the NIB over controllers.
-
-To increase the reliablity of the sysetm, Onix deals with four types of network failure: forwarding failure, link failure, Onix instance failure, and network connectivity failure. To deal with forwarding and link failures, the controllers direct traffic around the failures. These failures are disseminated as updates to the topology and force recomputation of the forwarding failures. When an Onix controller fails, the Zookeeper coordination service sees that the failure happened by the lack of a keep-alive heartbeat. Then, the node responsibilities are pawned off as needed. The controllers must also resolve race conditions that may have occured from incompletely written state.
-    
     
 
 
@@ -217,7 +217,19 @@ To increase the reliablity of the sysetm, Onix deals with four types of network 
 
 \section{State}
 
+We examine the types of state in these systems and their requirements.
+
+network inforamation base
+
+application requirements
+
+strong transactional
+coordination
+weak
+
 \subsection{Topology}
+
+
 known hosts. links between them
 yang model in odl
 
