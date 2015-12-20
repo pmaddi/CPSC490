@@ -192,33 +192,10 @@ To improve the scalablity of the system, the controller logic can be is partitio
 
 Another way the systems aims to improve performance is by aggregating each subset of network elements managed by each Onix node into single nodes. Then, the topology can be represented by the links amongnetwork subsets. This avoids spamming external CPUs with high rates of network events since there are fewer links to describe. A downside to this is that the DHT outside of the subset would only have link-utilization for the aggregated topology. To increase performance from this point, the systems would need partition the NIB over controllers.
 
-To increase the reliablity of the sysetm, Onix deals with four types of network failure: forwarding failure, link failure, Onix instance failure, and network connectivity failure. To deal with forwarding and link failures, the controllers have built in logic to 
-reliability
-    network link failure
-        steer traffic around
-    onix fail
-        scan and deal with using coordination
+To increase the reliablity of the sysetm, Onix deals with four types of network failure: forwarding failure, link failure, Onix instance failure, and network connectivity failure. To deal with forwarding and link failures, the controllers direct traffic around the failures. These failures are disseminated as updates to the topology and force recomputation of the forwarding failures. When an Onix controller fails, the Zookeeper coordination service sees that the failure happened by the lack of a keep-alive heartbeat. Then, the node responsibilities are pawned off as needed. The controllers must also resolve race conditions that may have occured from incompletely written state.
     
     
-consistency / durability depending on requirements. replicated transactional database and one hop DHT for more tolerant things
 
-distribute nib
-    net policy declarations change slowly and high durability
-    link load weak
-    status flags of adjacency easier to resolve so kinda in the middle
-    app designers decide where to put nib. 
-        can even roll ya own
-    transactional thing / dynamoish DHT 
-    
-    mainly interact with NIB
-    return openflow events and stuff with network state mgmt
-        map swtich database to NIB entries
-        any southbound interface
-
-consistency
-    zookeeper for coordination
-    but most prefer the transactions of transactional database on the NIB
-    
 
 
 % 
@@ -252,6 +229,24 @@ yang model in odl
 
 onix nib etc
 typed entries
+consistency / durability depending on requirements. replicated transactional database and one hop DHT for more tolerant things
+distribute nib
+    net policy declarations change slowly and high durability
+    link load weak
+    status flags of adjacency easier to resolve so kinda in the middle
+    app designers decide where to put nib. 
+        can even roll ya own
+    transactional thing / dynamoish DHT 
+    
+    mainly interact with NIB
+    return openflow events and stuff with network state mgmt
+        map swtich database to NIB entries
+        any southbound interface
+
+consistency
+    zookeeper for coordination
+    but most prefer the transactions of transactional database on the NIB
+    
 \subsection{Coordination?}
 management of mapping from controllers to hosts
 
