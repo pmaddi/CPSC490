@@ -207,12 +207,8 @@ Of the network functions served by the ODL controller, which include a statistic
 
 
 % <The OpenDaylight controller is built using the Java OSGi framework. OSGi adds a modular framework that allows starting, stopping, loading and unloading of Java modules without bringing down the entire running JVM platform. Ryu controller does not offer this comodity. In Ryu we need to stop the controller and run it again with the needed modules for the REST methods we want to execute or we need to build a REST API with all REST modules included in it, which runs once and provides all REST methods without stopping the controller. >
-
 % how is topology discovered
-
-
 % \section{Common Data Structures}
-
 % ugh
 
 \section{State Maintainence}
@@ -237,14 +233,15 @@ The main objects that the SDN controllers must track are the topological network
 Depending on how the controller aggregates network elements, this state can be represented in a few ways. ODL maintains an a set of network layers, and each one includes a list of nodes relative to its network layer. In ODL, there are two components of the inventory and topology management model, one of which defines the layers of the network along with inventories, and another which adds the links between the nodes in each layer to reflect how it is connected.
 Therefore, the system enforces that the inventories of nodes and their layering are stored separately from the link information to allows varying consitency guarantees as needed by the application.
 
-.. aplications need x cosistency
+How the inventory is managed depends on both the application and the scale of the network. When the NIB is small enough that it fits in memory, 
+
 
 ownership information
 consistency
     zookeeper for coordination
     but most prefer the transactions of transactional database on the NIB
 
-\subsection*{Topology}
+\subsection*{Topology and link state}
 igp topo, l3 unicast, ospf, isis
 generalized aggregetation as overlay networks
 onix nib etc
@@ -266,22 +263,13 @@ distribute nib
 
 
 
-
-\subsection*{Link state}
-
-
-
-
-\subsection*{Flow policies}
+\subsection*{Flow policies and forwarding behavior}
 
 
 (Partitioning the flow-processing state requires that all controllers be able to set up paths in the network, end to end. Therefore, each Onix instance needs to know the location of all end-points as well as the link state of the network. However, it is not particularly important that this information be strongly consistent between controllers. At worst, a flow is routed to an old location of the host over a failed link, which is impossible to avoid during network element failures.
 It is also unnecessary for the link state to be persistent, since this information is obtained dynamically. Therefore, the controllers can use the DHT for storing link-state, which allows tens of thousands of updates per second (see Section 7).)
 
 user rules
-
-
-
 
 \subsection*{Notifications}
 data change notification
