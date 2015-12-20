@@ -237,7 +237,7 @@ How the inventory is managed depends primarily on the scale of the network since
 
 \subsection*{Topology and link state}
 
-The topology of the system includes the inventory of nodes, as well as the link states between them. 
+The topology of the system includes the inventory of nodes, as well as the link states between them. In general, the consistency requirements are weaker when dealing with link state, since they can always be dynamically generated from the network. ONIX stores these eventually consistent state in a DHT with one-hop routing similar to Dynamo \cite{decandia2007dynamo}.
 
 igp topo, l3 unicast, ospf, isis
 generalized aggregetation as overlay networks
