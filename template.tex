@@ -220,11 +220,12 @@ Of the network functions served by the ODL controller, which include a statistic
 We examine the types of state maintained by software defined networks, and how they are maintained. Each of the systems stores state differently, with varying levels of flexibility depending on the application and with different default configurations. While the controllers differ in this regard, all have the ability to provide the following servies for storing and disseminating state:
 
 \begin{itemize}
-\item strong transactional
-\item coordination
-\item weaker
-\item notificaion system
+\item Datastore that provides transactions over the network with arbitrarily large fields
+\item Coordination system that prefers small fields and is optimized for reads over writes
+\item Distributed storage mechanisim that provides weaker guarantees but can provide higher availibility
+\item Notificaion system where controller logic can subscribe to state change events from particular elements of data
 \end{itemize}
+
 network inforamation base
 
 application requirements
