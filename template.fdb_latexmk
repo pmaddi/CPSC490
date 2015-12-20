@@ -1,9 +1,9 @@
 # Fdb version 3
-["bibtex template"] 1450653508 "template.aux" "template.bbl" "template" 1450653523
+["bibtex template"] 1450653556 "template.aux" "template.bbl" "template" 1450653556
   "/usr/local/texlive/2014/texmf-dist/bibtex/bst/base/acm.bst" 1292289607 21064 c61a48664f3c347ce7f73c1a6a530506 ""
   "template.aux" 1450653523 2128 39522aefbf5fd7e6a655568f5733f4a2 ""
   "template.bcf" 0 -1 0 ""
-  "template.bib" 1450636167 7892 67856eeb530ef5d2c0922be8b02b5905 ""
+  "template.bib" 1450653551 8336 3ea06c48ff1c9ba97b2fc49a82476007 ""
   (generated)
   "template.blg"
   "template.bbl"

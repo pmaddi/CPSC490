@@ -3,7 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: template.aux
 The style file: acm.bst
 Database file #1: template.bib
-Warning--I didn't find a database entry for "decandia2007dynamo"
 Warning--to sort, need author or key in ONV:wiki
 Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
 while executing---line 1092 of file acm.bst
@@ -20,46 +19,47 @@ while executing---line 1133 of file acm.bst
 Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
 while executing---line 1133 of file acm.bst
 Warning--empty journal in network2015topologies
+Warning--can't use both volume and number fields in decandia2007dynamo
 Warning--empty journal in bgp:rfc
-You've used 17 entries,
+You've used 18 entries,
             2253 wiz_defined-function locations,
-            621 strings with 6861 characters,
-and the built_in function-call counts, 6348 in all, are:
-= -- 579
-> -- 383
+            628 strings with 7157 characters,
+and the built_in function-call counts, 7024 in all, are:
+= -- 641
+> -- 430
 < -- 0
-+ -- 160
-- -- 140
-* -- 530
-:= -- 1043
-add.period$ -- 47
-call.type$ -- 17
-change.case$ -- 119
++ -- 179
+- -- 158
+* -- 591
+:= -- 1146
+add.period$ -- 50
+call.type$ -- 18
+change.case$ -- 131
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 225
-empty$ -- 455
-format.name$ -- 140
-if$ -- 1296
+cite$ -- 24
+duplicate$ -- 248
+empty$ -- 497
+format.name$ -- 158
+if$ -- 1437
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 17
-newline$ -- 84
-num.names$ -- 32
-pop$ -- 129
+int.to.str$ -- 18
+missing$ -- 18
+newline$ -- 89
+num.names$ -- 34
+pop$ -- 142
 preamble$ -- 1
-purify$ -- 102
+purify$ -- 113
 quote$ -- 0
-skip$ -- 147
+skip$ -- 167
 stack$ -- 0
-substring$ -- 289
-swap$ -- 60
+substring$ -- 326
+swap$ -- 71
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
-warning$ -- 5
-while$ -- 56
-width$ -- 19
-write$ -- 166
+type$ -- 72
+warning$ -- 6
+while$ -- 61
+width$ -- 20
+write$ -- 178
 (There were 6 error messages)

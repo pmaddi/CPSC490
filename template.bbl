@@ -26,6 +26,13 @@ Opendaylight network virtualization (onv).
 \newblock Towards robust distributed systems.
 \newblock In {\em PODC\/} (2000), vol.~7.
 
+\bibitem{decandia2007dynamo}
+{\sc DeCandia, G., Hastorun, D., Jampani, M., Kakulapati, G., Lakshman, A.,
+  Pilchin, A., Sivasubramanian, S., Vosshall, P., and Vogels, W.}
+\newblock Dynamo: amazon's highly available key-value store.
+\newblock In {\em ACM SIGOPS Operating Systems Review\/} (2007), vol.~41, ACM,
+  pp.~205--220.
+
 \bibitem{enns2011netconf}
 {\sc Enns, R., Bjorklund, M., and Schoenwaelder, J.}
 \newblock Netconf configuration protocol.
