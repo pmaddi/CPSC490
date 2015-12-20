@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 18:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -323,17 +323,17 @@ Underfull \hbox (badness 1558) in paragraph at lines 310--312
  []
 
 [6] (./template.bbl
-Underfull \hbox (badness 1264) in paragraph at lines 30--33
+Underfull \hbox (badness 1264) in paragraph at lines 37--40
 []\OT1/ptm/m/sc/10 Enns, R., Bjork-lund, M., and Schoen-
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 57--62
+Underfull \hbox (badness 1137) in paragraph at lines 64--69
 \OT1/ptm/m/sc/10 b-ling, J., Poutievski, L., Zhu, M., Ra-
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 81--85
+Underfull \hbox (badness 1117) in paragraph at lines 88--92
 \OT1/ptm/m/sc/10 Gray, K.  \OT1/ptm/m/n/10 Open-day-light: To-wards a model-
  []
 
@@ -342,6 +342,9 @@ Underfull \hbox (badness 1117) in paragraph at lines 81--85
 ] (./template.aux)
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
@@ -359,7 +362,7 @@ live/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/201
 4/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on template.pdf (8 pages, 105937 bytes).
+Output written on template.pdf (8 pages, 106391 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream

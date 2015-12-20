@@ -100,15 +100,15 @@ Centralized control in SDN networks also have scaling issues, and it is necessar
 % 
 % OpenFlow is the protocol for communicating with the routers and switches. It allows the controller to install flows in the system.
 % 
-\subsection{ONIX}
+\subsection{Onix}
 
-ONIX was the first of these distributed SDN controllers to be released with the goal of providing networking management view abstractions apart from NOX, which did not address reliability or scalibility concerns \cite{feamster2014road}. ONIX also provides a more general API than it's predicesors, along with the felxibility to connect to general datastores and southbound protocols \cite{koponen2010onix}.
+Onix was the first of these distributed SDN controllers to be released with the goal of providing networking management view abstractions apart from NOX, which did not address reliability or scalibility concerns \cite{feamster2014road}. Onix also provides a more general API than it's predicesors, along with the felxibility to connect to general datastores and southbound protocols \cite{koponen2010onix}.
 
-ONIX consists of the unerlying physical infrastructure that needs to be managed, connectivity infrasctructure, Onix controllers, and the application logic. The system also introduces the idea of the Network Information Base (NIB) which extends the idea of the Routing Information Base to include a graph of the network topology. This topology is how applications primarily interact with the system, both for modifying and accessing network state. Therefore, much care is taken to allow the application to distribute this information and replicate it among the controllers.
+Onix consists of the unerlying physical infrastructure that needs to be managed, connectivity infrasctructure, Onix controllers, and the application logic. The system also introduces the idea of the Network Information Base (NIB) which extends the idea of the Routing Information Base to include a graph of the network topology. This topology is how applications primarily interact with the system, both for modifying and accessing network state. Therefore, much care is taken to allow the application to distribute this information and replicate it among the controllers.
 
 The NIB provides methods for the applicaiton logic to modify the network elements through an index of the network elements, as well as a notification system to asynchronously alert the appliation of state changes of watched network elements. When making these state changes, the system doesn't allow locking across the system, but only on the local controller without guarantees on the global state by default. 
 
-To add some level of consistency to sets of updates that might have dependencies on one another, ONIX provides a synchronization primative. Though all operations are asynchronous, this primitive allows callbacks to be executed once a change propagated to avoid race conditions.
+To add some level of consistency to sets of updates that might have dependencies on one another, Onix provides a synchronization primative. Though all operations are asynchronous, this primitive allows callbacks to be executed once a change propagated to avoid race conditions.
 
 To improve the scalablity of the system, the controller logic can be is partitioned over multiple Onix controllers depending on the application requirements. This is handled in two ways: dividing the network traffic in case the forwarding state entries exceed the memory on single controllers, and dividing the NIB over the controllers too if its representaion cannot fit in memory. Generally, the full NIB can fit in memory and writes are rare, so it ist stored in the fully replicted datastore across all controllers. The link utilization, however, is always changing and is stored in a DHT with weaker consistency guarantees.
 
@@ -223,7 +223,7 @@ We examine the types of state maintained by software defined networks, and how t
 \end{itemize}
 
 With these services, all of these systems aim to manage the state of the network through the network information base (by various names depending on the controller.) These include the representation fo the network topology as well as the state shared by the other controller instances. While this idea unites the various controllers, they behave differently in how they divide these abstractions among the data plane, state managment layer, and the application control
-logic. Newer systems such as OpenDaylight and ONOS tend to give the application higher level abstraction as to how to store state, and in the case of OpenDaylight completely abstracts the datastore as dynamically loadable resource that can be selected by the API. Older systems such as ONIX theoretically proivde the same functionality but simply define an interface for managing the resources. 
+logic. Newer systems such as OpenDaylight and ONOS tend to give the application higher level abstraction as to how to store state, and in the case of OpenDaylight completely abstracts the datastore as dynamically loadable resource that can be selected by the API. Older systems such as Onix theoretically proivde the same functionality but simply define an interface for managing the resources. 
 
 
 \subsection*{Inventory}
@@ -237,9 +237,9 @@ How the inventory is managed depends primarily on the scale of the network since
 
 \subsection*{Topology and link-state}
 
-The topology of the system includes the inventory of nodes, as well as the link-states between them. In general, the consistency requirements are weaker when dealing with link-state, since they can always be dynamically generated from the network. Applications tend to prefer availibility, and no applications should require persistence of the link-state. ONIX stores these eventually consistent state in a DHT with one-hop routing similar to Dynamo \cite{decandia2007dynamo}.
+The topology of the system includes the inventory of nodes, as well as the link-states between them. In general, the consistency requirements are weaker when dealing with link-state, since they can always be dynamically generated from the network. Applications tend to prefer availibility, and no applications should require persistence of the link-state. Onix stores these eventually consistent state in a DHT with one-hop routing similar to Dynamo \cite{decandia2007dynamo}.
 
-Different applications tolerate varying levels of inconsistency in the link-state. Ethane \cite{koponen2010onix}, which provides a flow managment interface, prefers the availibility of the link-state to better install flows on the switches.
+Different applications tolerate varying levels of inconsistency in the link-state. Ethane \cite{koponen2010onix}, which provides a flow managment interface, prefers the availibility of the link-state to better install flows on the switches. Similarly, virtualization of data centers with multiple tennants requires the creation of networks. The control logic for induvidual tenants stay isolated from each other using encapsulation, so it establishes tunnels between each pair of hypervisors. Since the number of virtual machines can easily be in the thousands, single Onix instances may be unable to keep the full link-state in memory so it would partition the load and maintain a weakly consistent version of it the DHT for tunneling.
 
 igp topo, l3 unicast, ospf, isis
 generalized aggregetation as overlay networks
