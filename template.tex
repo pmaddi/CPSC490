@@ -217,15 +217,18 @@ Of the network functions served by the ODL controller, which include a statistic
 
 \section{State}
 
-We examine the types of state in these systems and their requirements.
+We examine the types of state maintained by software defined networks, and how they are maintained. Each of the systems stores state differently, with varying levels of flexibility depending on the application and with different default configurations. While the controllers differ in this regard, all have the ability to provide the following servies for storing and disseminating state:
 
+\begin{list}
+\item strong transactional
+\item coordination
+\item weak
+\item notificaion system
+\end{list}
 network inforamation base
 
 application requirements
 
-strong transactional
-coordination
-weak
 
 igp topo, l3 unicast, ospf, isis
 
