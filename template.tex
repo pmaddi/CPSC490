@@ -40,6 +40,8 @@ Describe the types of state maintained by the ONOS and OpenDaylight SDN controll
 
 \section{Background}
 
+The purpose of this report is to document the current progress in SDN systems and discuss the types and requirements of state in these systems. The paper introduces the idea of the shared-log architcture for providing causal consistency. Ultimately, we would like to motivate the idea that causal consistency would be useful in providing weaker consistency guarantees for certain types of shared state among SDN controllers.
+
 \subsection{Shared logs}
 
 A set of totally ordered shared logs can provide weaker consistency on the data structure built on top of it. Each element in the logs have a set of dependencies. That is, to know element \verb_e_, all of the elements of \verb_e.dependencies_ must be loaded.  By allowing dependencies to be specified between elements of various shared logs, arbitrary partial orderings of nodes can be constructed while preserving the convenience of having totally ordered logs. By carefully selecting what operations on the higher level data structure require global reads and writes, causal ordering can be guaranteed across the network.
