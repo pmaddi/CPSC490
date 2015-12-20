@@ -188,22 +188,10 @@ The NIB provides methods for the applicaiton logic to modify the network element
 
 To add some level of consistency to sets of updates that might have dependencies on one another, ONIX provides a synchronization primative. Though all operations are asynchronous, this primitive allows callbacks to be executed once a change propagated to avoid race conditions.
 
-To aid in the scalablity of the system, 
-partition so controller has some of nib in memory
-    few switches, but all routing state exceeds mem of any server
-    replicate all switch state, but partition forwarding state and assign to diff ornix instances
-    keep switch and link state in replicated durable inventory
-    link utilization in DHT
-        like MPLS?
+To improve the scalablity of the system, the controller logic can be is partitioned over multiple Onix controllers depending on the application requirements. This is handled in two ways: dividing the network traffic in case the forwarding state entries exceed the memory on single controllers, and dividing the NIB over the controllers too if its representaion cannot fit in memory. Generally, the full NIB can fit in memory and writes are rare, so it ist stored in the fully replicted datastore across all controllers. The link utilization, however, is always changing and is stored in a DHT with weaker consistency guarantees.
 
-    can also break down NIBs
-aggregate as single node in hierarchy 
-    avoid remote instances having high-rates of updates 
-    squish subtopology into single logical node
-    like ATM PNNI
-    still have full connectivity
+Another way the systems aims to improve performance is by aggregating each subset of network elements managed by each Onix node into single nodes. Then, the topology can be represented by the links amongnetwork subsets. This avoids spamming external CPUs with high rates of network events since there are fewer links to describe. A downside to this is that the DHT outside of the subset would only have link-utilization for the aggregated topology. To increase performance from this point, the systems would need partition the NIB over controllers.
 
-    aggregate interdomain (not done here)
 
 reliability
     network link failure
