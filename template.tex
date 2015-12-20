@@ -179,26 +179,16 @@ We will focus on the specific application of network virtualization in OpenDayli
 Of the network functions served by the ODL controller, which include a statistics manager, forwarding rules manager, and an inventory manager, the topology service is of particular importance for network virtualization becuase it is required to translate virtual routing descisions to network flows \cite{jain2013network}. To achieve this, the system stores the messages from BGP-LS and passes them to the Topology Exporter that generates that makes available the topology of the controller's switchces via RESTCONF. The topology includes the connections between nodes, routers, switches, hosts and various appliances of the netowork. This system produces a reliable network view in the case of a single controller, but becomes more complicated if more than one controller is used, since the sub-network views must be constructed into the global view to make flow descisions \cite{bgp:rfc}.
 
 \subsection{ONIX}
-\cite{koponen2010onix}
 
-Provide network management view abstractions.
+ONIX was the first of these distributed SDN controllers to be released with the goal of providing networking management view abstractions apart from NOX, which did not address reliability or scalibility concerns \cite{feamster2014road}. ONIX also provides a more general API than it's predicesors, along with the felxibility to connect to general datastores and southbound protocols \cite{koponen2010onix}.
 
-physical iinfra
-connectivity
-onix distributed system
-control logic
+ONIX consists of the unerlying physical infrastructure that needs to be managed, connectivity infrasctructure, Onix controllers, and the application logic. The system also introduces the idea of the Network Information Base (NIB) which extends the idea of the Routing Information Base to include a graph of the network topology. This topology is how applications primarily interact with the system, both for modifying and accessing network state. Therefore, much care is taken to allow the application to distribute this information and replicate it among the controllers.
 
-network information base has the topology graph on each controller
-typed entries
+The NIB provides methods for the applicaiton logic to modify the network elements through an index of the network elements, as well as a notification system to asynchronously alert the appliation of state changes of watched network elements. When making these state changes, the system doesn't allow locking across the system, but only on the local controller without guarantees on the global state by default. 
 
-accessing network things
-no locking, but request access on local instance only
-    external locking coordination later
+To add some level of consistency to sets of updates that might have dependencies on one another, ONIX provides a synchronization primative. Though all operations are asynchronous, this primitive allows callbacks to be executed once a change propagated to avoid race conditions.
 
-all async, eventual guaranteez
-syncronization primative, an implement cooridnation if ya want so no race cond
-
-scalability n reliability
+To aid in the scalablity of the system, 
 partition so controller has some of nib in memory
     few switches, but all routing state exceeds mem of any server
     replicate all switch state, but partition forwarding state and assign to diff ornix instances
@@ -233,7 +223,13 @@ distribute nib
     transactional thing / dynamoish DHT 
     
     mainly interact with NIB
-    return openflow events and stuff
+    return openflow events and stuff with network state mgmt
+        map swtich database to NIB entries
+        any southbound interface
+
+consistency
+    zookeeper for coordination
+    but most prefer the transactions of transactional database on the NIB
     
 
 
@@ -267,7 +263,7 @@ known hosts. links between them
 yang model in odl
 
 onix nib etc
-
+typed entries
 \subsection{Coordination?}
 management of mapping from controllers to hosts
 

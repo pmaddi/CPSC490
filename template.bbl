@@ -44,6 +44,13 @@ Opendaylight network virtualization (onv).
   computing: a survey.
 \newblock {\em Communications Magazine, IEEE 51}, 11 (November 2013), 24--31.
 
+\bibitem{koponen2010onix}
+{\sc Koponen, T., Casado, M., Gude, N., Stribling, J., Poutievski, L., Zhu, M.,
+  Ramanathan, R., Iwata, Y., Inoue, H., Hama, T., et~al.}
+\newblock Onix: A distributed control platform for large-scale production
+  networks.
+\newblock In {\em OSDI\/} (2010), vol.~10, pp.~1--6.
+
 \bibitem{bgp:rfc}
 {\sc Lapukhov, P.}
 \newblock Centralized routing control in bgp networks using link-state

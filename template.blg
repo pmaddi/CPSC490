@@ -7,45 +7,45 @@ Warning--to sort, need author or key in ONV:wiki
 Warning--empty author in ONV:wiki
 Warning--empty journal in ONV:wiki
 Warning--empty journal in bgp:rfc
-You've used 14 entries,
+You've used 15 entries,
             2253 wiz_defined-function locations,
-            608 strings with 6282 characters,
-and the built_in function-call counts, 5179 in all, are:
-= -- 473
-> -- 302
+            612 strings with 6572 characters,
+and the built_in function-call counts, 5829 in all, are:
+= -- 528
+> -- 359
 < -- 0
-+ -- 125
-- -- 110
-* -- 431
-:= -- 845
-add.period$ -- 39
-call.type$ -- 14
-change.case$ -- 96
++ -- 148
+- -- 132
+* -- 491
+:= -- 953
+add.period$ -- 42
+call.type$ -- 15
+change.case$ -- 109
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 189
-empty$ -- 381
-format.name$ -- 110
-if$ -- 1065
+cite$ -- 19
+duplicate$ -- 208
+empty$ -- 417
+format.name$ -- 132
+if$ -- 1195
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 14
-newline$ -- 70
-num.names$ -- 26
-pop$ -- 104
+int.to.str$ -- 15
+missing$ -- 15
+newline$ -- 75
+num.names$ -- 28
+pop$ -- 120
 preamble$ -- 1
-purify$ -- 82
+purify$ -- 94
 quote$ -- 0
-skip$ -- 123
+skip$ -- 138
 stack$ -- 0
-substring$ -- 237
-swap$ -- 51
+substring$ -- 258
+swap$ -- 57
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
+type$ -- 60
 warning$ -- 4
-while$ -- 45
-width$ -- 16
-write$ -- 138
+while$ -- 50
+width$ -- 17
+write$ -- 149
 (There were 4 warnings)

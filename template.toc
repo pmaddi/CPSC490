@@ -2,10 +2,16 @@
 \contentsline {subsection}{\numberline {1.1}Shared logs}{1}
 \contentsline {subsection}{\numberline {1.2}Consistency}{2}
 \contentsline {section}{\numberline {2}Software Defined Networking}{2}
-\contentsline {subsection}{\numberline {2.1}ONOS}{2}
+\contentsline {subsection}{\numberline {2.1}ONOS}{3}
 \contentsline {subsection}{\numberline {2.2}OpenDaylight}{3}
-\contentsline {section}{\numberline {3}Proposed SDN extensions}{4}
-\contentsline {subsection}{\numberline {3.1}Isolation}{4}
-\contentsline {subsection}{\numberline {3.2}Fault tolerance}{5}
-\contentsline {subsection}{\numberline {3.3}Sharing of data (Avalibility)}{5}
-\contentsline {section}{\numberline {4}Conclusion}{5}
+\contentsline {subsection}{\numberline {2.3}ONIX}{4}
+\contentsline {section}{\numberline {3}State}{4}
+\contentsline {subsection}{\numberline {3.1}Topology}{4}
+\contentsline {subsection}{\numberline {3.2}Coordination?}{4}
+\contentsline {subsection}{\numberline {3.3}Network function virtualization}{4}
+\contentsline {subsection}{\numberline {3.4}Network virtualization}{4}
+\contentsline {section}{\numberline {4}Proposed SDN extensions}{4}
+\contentsline {subsection}{\numberline {4.1}Isolation}{5}
+\contentsline {subsection}{\numberline {4.2}Fault tolerance}{5}
+\contentsline {subsection}{\numberline {4.3}Sharing of data (Avalibility)}{6}
+\contentsline {section}{\numberline {5}Conclusion}{6}
