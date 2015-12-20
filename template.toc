@@ -6,10 +6,9 @@
 \contentsline {subsection}{\numberline {2.2}ONOS}{3}
 \contentsline {subsection}{\numberline {2.3}OpenDaylight}{4}
 \contentsline {section}{\numberline {3}State}{5}
-\contentsline {subsection}{\numberline {3.1}Topology}{5}
-\contentsline {subsection}{\numberline {3.2}Coordination?}{5}
-\contentsline {subsection}{\numberline {3.3}Network function virtualization}{5}
-\contentsline {subsection}{\numberline {3.4}Network virtualization}{5}
+\contentsline {subsection}{\numberline {3.1}Coordination?}{5}
+\contentsline {subsection}{\numberline {3.2}Network function virtualization}{5}
+\contentsline {subsection}{\numberline {3.3}Network virtualization}{5}
 \contentsline {section}{\numberline {4}Proposed SDN extensions}{5}
 \contentsline {subsection}{\numberline {4.1}Isolation}{5}
 \contentsline {subsection}{\numberline {4.2}Fault tolerance}{6}
