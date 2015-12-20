@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -313,12 +313,15 @@ LaTeX Warning: Citation `decandia2007dynamo' on page 5 undefined on input line
 240.
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 242--254
+Underfull \hbox (badness 1112) in paragraph at lines 244--256
 \OT1/ptm/m/n/10 tol-er-ant things dis-tribute nib net pol-icy dec-la-ra-tions
  []
 
-[5]
-Underfull \hbox (badness 1558) in paragraph at lines 307--309
+
+Underfull \vbox (badness 1281) has occurred while \output is active []
+
+ [5]
+Underfull \hbox (badness 1558) in paragraph at lines 310--312
 \OT1/ptm/m/n/10 could be im-ple-mented by hav-ing a Paxos-like ser-
  []
 
@@ -359,7 +362,7 @@ live/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/201
 4/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on template.pdf (8 pages, 105685 bytes).
+Output written on template.pdf (8 pages, 105846 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
