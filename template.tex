@@ -233,7 +233,7 @@ The main objects that the SDN controllers must track are the topological network
 Depending on how the controller aggregates network elements, this state can be represented in a few ways. ODL maintains an a set of network layers, and each one includes a list of nodes relative to its network layer. In ODL, there are two components of the inventory and topology management model, one of which defines the layers of the network along with inventories, and another which adds the links between the nodes in each layer to reflect how it is connected.
 Therefore, the system enforces that the inventories of nodes and their layering are stored separately from the link information to allows varying consitency guarantees as needed by the application.
 
-How the inventory is managed depends on both the application and the scale of the network. When the NIB is small enough that it fits in memory, 
+How the inventory is managed depends on both the application and the scale of the network. When the NIB is small enough that it fits in memory, it can be kept in either a transactional database or in the
 
 
 ownership information
