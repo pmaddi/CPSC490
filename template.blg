@@ -4,48 +4,61 @@ The top-level auxiliary file: template.aux
 The style file: acm.bst
 Database file #1: template.bib
 Warning--to sort, need author or key in ONV:wiki
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1092 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1092 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1092 of file acm.bst
 Warning--empty author in ONV:wiki
 Warning--empty journal in ONV:wiki
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1133 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1133 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1133 of file acm.bst
+Warning--empty journal in network2015topologies
 Warning--empty journal in bgp:rfc
-You've used 16 entries,
+You've used 17 entries,
             2253 wiz_defined-function locations,
-            617 strings with 6715 characters,
-and the built_in function-call counts, 6168 in all, are:
-= -- 562
-> -- 376
+            620 strings with 6843 characters,
+and the built_in function-call counts, 6348 in all, are:
+= -- 579
+> -- 383
 < -- 0
-+ -- 156
-- -- 138
-* -- 522
-:= -- 1009
-add.period$ -- 45
-call.type$ -- 16
-change.case$ -- 115
++ -- 160
+- -- 140
+* -- 530
+:= -- 1043
+add.period$ -- 47
+call.type$ -- 17
+change.case$ -- 119
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 217
-empty$ -- 442
-format.name$ -- 138
-if$ -- 1262
+cite$ -- 22
+duplicate$ -- 225
+empty$ -- 455
+format.name$ -- 140
+if$ -- 1296
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 16
-newline$ -- 80
-num.names$ -- 30
-pop$ -- 124
+int.to.str$ -- 17
+missing$ -- 17
+newline$ -- 84
+num.names$ -- 32
+pop$ -- 129
 preamble$ -- 1
-purify$ -- 99
+purify$ -- 102
 quote$ -- 0
-skip$ -- 143
+skip$ -- 147
 stack$ -- 0
-substring$ -- 283
-swap$ -- 59
+substring$ -- 289
+swap$ -- 60
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
-warning$ -- 4
-while$ -- 54
-width$ -- 18
-write$ -- 159
-(There were 4 warnings)
+type$ -- 68
+warning$ -- 5
+while$ -- 56
+width$ -- 19
+write$ -- 166
+(There were 6 error messages)
