@@ -3,6 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: template.aux
 The style file: acm.bst
 Database file #1: template.bib
+Warning--I didn't find a database entry for "decandia2007dynamo"
 Warning--to sort, need author or key in ONV:wiki
 Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
 while executing---line 1092 of file acm.bst
@@ -22,7 +23,7 @@ Warning--empty journal in network2015topologies
 Warning--empty journal in bgp:rfc
 You've used 17 entries,
             2253 wiz_defined-function locations,
-            620 strings with 6843 characters,
+            621 strings with 6861 characters,
 and the built_in function-call counts, 6348 in all, are:
 = -- 579
 > -- 383
