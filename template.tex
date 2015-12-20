@@ -215,7 +215,7 @@ Of the network functions served by the ODL controller, which include a statistic
 
 % ugh
 
-\section{State}
+\section{State Maintainence}
 
 We examine the types of state maintained by software defined networks, and how they are maintained. Each of the systems stores state differently, with varying levels of flexibility depending on the application and with different default configurations. While the controllers differ in this regard, all have the ability to provide the following servies for storing and disseminating state:
 
@@ -232,6 +232,7 @@ logic. Newer systems such as OpenDaylight and ONOS tend to give the application 
 
 \subsection*{Inventory}
 
+The main objects that the SDN controllers must track are the topological network elements and the controller nodes. 
 topo inventiry and node inventory
 
 \subsection*{Topology}
@@ -260,6 +261,7 @@ consistency
     but most prefer the transactions of transactional database on the NIB
 \subsection*{Link state}
 \subsection*{Flow policies}
+
 
 (Partitioning the flow-processing state requires that all controllers be able to set up paths in the network, end to end. Therefore, each Onix instance needs to know the location of all end-points as well as the link state of the network. However, it is not particularly important that this information be strongly consistent between controllers. At worst, a flow is routed to an old location of the host over a failed link, which is impossible to avoid during network element failures.
 It is also unnecessary for the link state to be persistent, since this information is obtained dynamically. Therefore, the controllers can use the DHT for storing link-state, which allows tens of thousands of updates per second (see Section 7).)
