@@ -231,35 +231,12 @@ logic. Newer systems such as OpenDaylight and ONOS tend to give the application 
 
 
 \subsection*{Inventory}
+
+topo inventiry and node inventory
+
 \subsection*{Topology}
-\subsection*{Coordination}
-\subsection*{Link state}
-toplogy inventory
-
-node inventory
-
-data change notification
-
-% \subsection*{Topology}
-
-
-The 
-application requirements
-
 igp topo, l3 unicast, ospf, isis
-
 generalized aggregetation as overlay networks
-
-ownership information
-
-user rules
-
-link state
-
-
-known hosts. links between them
-yang model in odl
-
 onix nib etc
 typed entries
 consistency / durability depending on requirements. replicated transactional database and one hop DHT for more tolerant things
@@ -276,24 +253,28 @@ distribute nib
         map swtich database to NIB entries
         any southbound interface
 
+\subsection*{Coordination}
+ownership information
 consistency
     zookeeper for coordination
     but most prefer the transactions of transactional database on the NIB
-    
-\subsection{Coordination?}
-management of mapping from controllers to hosts
+\subsection*{Link state}
+\subsection*{Flow policies}
 
-\subsection{Network function virtualization}
-\subsection{Network virtualization}
+(Partitioning the flow-processing state requires that all controllers be able to set up paths in the network, end to end. Therefore, each Onix instance needs to know the location of all end-points as well as the link state of the network. However, it is not particularly important that this information be strongly consistent between controllers. At worst, a flow is routed to an old location of the host over a failed link, which is impossible to avoid during network element failures.
+It is also unnecessary for the link state to be persistent, since this information is obtained dynamically. Therefore, the controllers can use the DHT for storing link-state, which allows tens of thousands of updates per second (see Section 7).)
+
+user rules
+\subsection*{Notifications}
+data change notification
+
+    
+%\subsection{Network function virtualization}
+%\subsection{Network virtualization}
 
 \section{Proposed SDN extensions}
 
 There are two main representations of state in the systems we have discussed. There is a coordination service ONOS that maintains the naming and other information that must be stored by the controllers. Also, there is a representaion of the graph topology that each controller must learn from the physical switches under its domain. Then, to generate the full topology of the network, these subnetwork topologies must be assembled in the full network view.
-
-
-Topology state
-
-Coordination state
 
 Consistency, durability, isolation etc requirements for each element of data
 \subsection{Isolation}

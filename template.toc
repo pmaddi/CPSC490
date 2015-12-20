@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {3.2}Network function virtualization}{5}
 \contentsline {subsection}{\numberline {3.3}Network virtualization}{5}
 \contentsline {section}{\numberline {4}Proposed SDN extensions}{5}
-\contentsline {subsection}{\numberline {4.1}Isolation}{5}
+\contentsline {subsection}{\numberline {4.1}Isolation}{6}
 \contentsline {subsection}{\numberline {4.2}Fault tolerance}{6}
-\contentsline {subsection}{\numberline {4.3}Sharing of data (Avalibility)}{6}
-\contentsline {section}{\numberline {5}Conclusion}{6}
+\contentsline {subsection}{\numberline {4.3}Sharing of data (Avalibility)}{7}
+\contentsline {section}{\numberline {5}Conclusion}{7}
