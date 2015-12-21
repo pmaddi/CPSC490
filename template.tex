@@ -16,7 +16,7 @@
 \begin{document}
 
 
-\title{\Large Applications of weakly consistent distributed data structures over shared logs}
+\title{\Large Consistency models of programmable networks}
 
 \author{Pranav Maddi}
 
@@ -27,12 +27,19 @@
 
 \subsection*{Abstract}
 
+Software Defined Networking enables innovation in network managment by abstracting the control plane away from the data plane of the network. We examine the implementation of three popular distributed SDN controllers and discuss the tradeoffs of network state mangagement techniques.
+
+This paper also introduces and motivates the shared log as a means for maintaining causally consistent state in a distributed system.
+By allowing dependencies to be specified between elements of various shared logs, arbitrary partial orderings of nodes can be constructed while preserving the convenience of having totally ordered logs.
+
 The purpose of this is to help understand how the weaker consistency models allowed through shared-log environemnts could be useful for software defined networking.
 Describe the types of state maintained by the ONOS and OpenDaylight SDN controllers.
 
 \section{Background}
 
 The purpose of this report is to document the current progress in SDN systems and discuss the types and requirements of state in these systems. The paper introduces the idea of the shared-log architcture for providing causal consistency. Ultimately, we would like to motivate the idea that causal consistency would be useful in providing weaker consistency guarantees for certain types of shared state among SDN controllers.
+
+The paper () implements a ZooKeeper-like system over shared logs to provide causally consistent 
 
 \subsection{Shared logs}
 

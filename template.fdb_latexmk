@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex template"] 1450657207 "template.aux" "template.bbl" "template" 1450657207
+["bibtex template"] 1450657207 "template.aux" "template.bbl" "template" 1450664018
   "/usr/local/texlive/2014/texmf-dist/bibtex/bst/base/acm.bst" 1292289607 21064 c61a48664f3c347ce7f73c1a6a530506 ""
-  "template.aux" 1450657207 2161 2df205729999cbd6d1b0e98f20a28287 ""
+  "template.aux" 1450664018 2161 2df205729999cbd6d1b0e98f20a28287 ""
   "template.bcf" 0 -1 0 ""
   "template.bib" 1450653551 8336 3ea06c48ff1c9ba97b2fc49a82476007 ""
   (generated)
   "template.blg"
   "template.bbl"
-["pdflatex"] 1450657206 "template.tex" "template.pdf" "template" 1450657206
+["pdflatex"] 1450664017 "template.tex" "template.pdf" "template" 1450664018
   "/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -78,10 +78,10 @@
   "/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1401025944 1445653 26a0aacf3d70032b1ec192e8c7792117 ""
   "/usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt" 1401025990 3832012 904d82bdcc8abf2b1cd296990b82553b ""
   "/usr/local/texlive/2014/texmf.cnf" 1401025936 577 a59edbde8d3a8c549d0eeaab1739e2ff ""
-  "template.aux" 1450657090 2161 c5e696806feafa6cab48b13aa1004d0a ""
-  "template.bbl" 1450655683 4250 2a13170aafbab0a392d00db86f9aba2f "bibtex template"
+  "template.aux" 1450664018 2161 2df205729999cbd6d1b0e98f20a28287 ""
+  "template.bbl" 1450657207 4250 2a13170aafbab0a392d00db86f9aba2f "bibtex template"
   "template.tex" 1450657204 32286 ce03cfaed06f9cf5b9e29392d0fdfcdd ""
-  "template.toc" 1450657090 783 df3615000d18b371f19cc597f7ac3aab ""
+  "template.toc" 1450664018 783 df3615000d18b371f19cc597f7ac3aab ""
   (generated)
   "template.aux"
   "template.pdf"
