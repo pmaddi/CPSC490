@@ -243,12 +243,10 @@ Different applications tolerate varying levels of inconsistency in the link-stat
 
 \subsection*{Flow policies and forwarding behavior}
 
-All of the controllers described here are flexible in the southbound interface, but the most supported one used is OpenFlow. Rather than have the application interact with OpenFlow's API, they provide a layer of abstraction over it. Events from the southbound controller are translated into events handled by the controller, and when the application adds flow entries to network entities, a module translates those to OpenFlow operations. These policy changes tend to be rare, only, occuring when the application needs to revise a routing descision. The 
+All of the controllers described here are flexible in the southbound interface, but the most supported one used is OpenFlow. Rather than have the application interact with OpenFlow's API, they provide a layer of abstraction over it. Events from the southbound controller are translated into events handled by the controller, and when the application adds flow entries to network entities, a module translates those to OpenFlow operations. 
 
-When the 
+These policy changes tend to be rare, only occuring when the application needs to revise a routing descision. Therefore, the controller tends to store these data in a transactional database providing strong consistncy.
 
-(Partitioning the flow-processing state requires that all controllers be able to set up paths in the network, end to end. Therefore, each Onix instance needs to know the location of all end-points as well as the link state of the network. However, it is not particularly important that this information be strongly consistent between controllers. At worst, a flow is routed to an old location of the host over a failed link, which is impossible to avoid during network element failures.
-It is also unnecessary for the link state to be persistent, since this information is obtained dynamically. Therefore, the controllers can use the DHT for storing link-state, which allows tens of thousands of updates per second (see Section 7).)
 \cite{koponen2010onix}.
 
 user rules
@@ -266,6 +264,8 @@ Similarly, with OpenDaylight, the graph topology of each controller is generated
 \bibliographystyle{acm}
 \bibliography{template}
 
+% (Partitioning the flow-processing state requires that all controllers be able to set up paths in the network, end to end. Therefore, each Onix instance needs to know the location of all end-points as well as the link state of the network. However, it is not particularly important that this information be strongly consistent between controllers. At worst, a flow is routed to an old location of the host over a failed link, which is impossible to avoid during network element failures.
+% It is also unnecessary for the link state to be persistent, since this information is obtained dynamically. Therefore, the controllers can use the DHT for storing link-state, which allows tens of thousands of updates per second (see Section 7).)
 % \clearpage
 % 
 % In ODL, there are a few types of networks supported...
