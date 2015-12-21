@@ -3,13 +3,13 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: template.aux
 The style file: acm.bst
 Database file #1: template.bib
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1092 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1092 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1092 of file acm.bst
 Warning--to sort, need author or key in ONV:wiki
-Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
-while executing---line 1092 of file acm.bst
-Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
-while executing---line 1092 of file acm.bst
-Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
-while executing---line 1092 of file acm.bst
 Warning--empty author in ONV:wiki
 Warning--empty journal in ONV:wiki
 Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies

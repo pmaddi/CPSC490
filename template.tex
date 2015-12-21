@@ -191,10 +191,6 @@ We will focus on the specific application of network virtualization in OpenDayli
 
 Of the network functions served by the ODL controller, which include a statistics manager, forwarding rules manager, and an inventory manager, the topology service is of particular importance for network virtualization becuase it is required to translate virtual routing descisions to network flows \cite{jain2013network}. To achieve this, the system stores the messages from BGP-LS and passes them to the Topology Exporter that generates that makes available the topology of the controller's switchces via RESTCONF. The topology includes the connections between nodes, routers, switches, hosts and various appliances of the netowork. This system produces a reliable network view in the case of a single controller, but becomes more complicated if more than one controller is used, since the sub-network views must be constructed into the global view to make flow descisions \cite{bgp:rfc}.
 
-    
-
-
-
 % 
 % Datastore can be pugged into any implementation
 % Can get topology information from a bgp feed
@@ -228,7 +224,6 @@ We examine the types of state maintained by software defined networks, and how t
 With these services, all of these systems aim to manage the state of the network through the network information base (by various names depending on the controller.) These include the representation fo the network topology as well as the state shared by the other controller instances. While this idea unites the various controllers, they behave differently in how they divide these abstractions among the data plane, state managment layer, and the application control
 logic. Newer systems such as OpenDaylight and ONOS tend to give the application higher level abstraction as to how to store state, and in the case of OpenDaylight completely abstracts the datastore as dynamically loadable resource that can be selected by the API. Older systems such as Onix theoretically proivde the same functionality but simply define an interface for managing the resources. 
 
-
 \subsection*{Inventory}
 
 The main objects that the SDN controllers must track are the topological network elements and the controller nodes \cite{network2015topologies}. These entities include the routers, switches and hosts of the system.
@@ -244,9 +239,10 @@ The topology of the system includes the inventory of nodes, as well as the link-
 
 Different applications tolerate varying levels of inconsistency in the link-state. Ethane \cite{koponen2010onix}, which provides a flow managment interface, prefers the availibility of the link-state to better install flows on the switches. Similarly, virtualization of data centers with multiple tennants requires the creation of networks. The control logic for induvidual tenants stay isolated from each other using encapsulation, so it establishes tunnels between each pair of hypervisors. Since the number of virtual machines can easily be in the thousands, single Onix instances may be unable to keep the full link-state in memory so it would partition the load and maintain a weakly consistent version of it the DHT for tunneling.
 
-In ODL, there are a few types of networks supported...
+(I might add a bit more here...)
 
 \subsection*{Flow policies and forwarding behavior}
+
 
 (Partitioning the flow-processing state requires that all controllers be able to set up paths in the network, end to end. Therefore, each Onix instance needs to know the location of all end-points as well as the link state of the network. However, it is not particularly important that this information be strongly consistent between controllers. At worst, a flow is routed to an old location of the host over a failed link, which is impossible to avoid during network element failures.
 It is also unnecessary for the link state to be persistent, since this information is obtained dynamically. Therefore, the controllers can use the DHT for storing link-state, which allows tens of thousands of updates per second (see Section 7).)
@@ -254,88 +250,91 @@ It is also unnecessary for the link state to be persistent, since this informati
 
 user rules
 
-\subsection*{Notifications}
-data change notification
-  
 %\subsection{Network function virtualization}
 %\subsection{Network virtualization}
 
 \section{Conclusion}
 
-\bibliographystyle{acm}
-\bibliography{template}
-
-\clearpage
-
-\section{Proposed SDN extensions}
-
-There are two main representations of state in the systems we have discussed. There is a coordination service ONOS that maintains the naming and other information that must be stored by the controllers. Also, there is a representaion of the graph topology that each controller must learn from the physical switches under its domain. Then, to generate the full topology of the network, these subnetwork topologies must be assembled in the full network view.
-
-Consistency, durability, isolation etc requirements for each element of data
-
-\subsection{Isolation}
-
 In both ONOS, the graph topology information stored by the controllers is eventually consistent. The ONOS paper suggests that this is "good enough" for traditional netowrking, and presumably good enough for their applications \cite{berde2014onos}. 
 
 Similarly, with OpenDaylight, the graph topology of each controller is generated by BGP and disseminated to the remaining controllers. To generate the full nework view, these sub-network topologies are passed to the master controller-node of the network \cite{ONV:wiki}. However, these network change events are assumed to be rare, and can only gurarantee eventual consistency over the topology link-state graph \cite{bgp:rfc}.
 
-However, I would argue that this can lead to problems with advanced SDN applications, primarily with network virtualization, since effective netowork virtualzation must be able to reliably isolate resources.
 
-Consider a network configuration with two groups that must be kept separate---Imagine that the engineering and accunting machines of an organization are on the same SDN network, and we want no packets to flow between the Engineering Virtual Network Segement and the Accounting VNS. In this case, imagine the following occurs:
+\bibliographystyle{acm}
+\bibliography{template}
 
-\begin{description}
-\item [Event 1] Alice connects to a controller in the Engineering VNS.
-\item [Event 2] Alice connects to a controller in the Accounting VNS.
-\item [Event 3] Alice disconnects from  the Engineering VNS controller.
-\end{description}
-
-Instead, with eventual consistency over the topology, the following ordering of events could be observed after those events:
-
-\begin{description}
-\item [Event 1] Alice connects to a controller in the Engineering VNS.
-\item [Event 3] Alice disconnects from the Engineering VNS controller.
-\item [Event 2] Alice connects to a controller in the Accounting VNS.
-\end{description}
-
-Which the virtualization service would deem valid after Event 3.
-
-Therefore, before it is possble for the network virtualizaton application to observe after the disconnection event that Alice is disconnected from the Enginerring VNS. In reality, however, Alice is connected to both the Engineering and Accounting VNS's. Clearly, in this case, some security measures could be installed to prevent such attacks on the network such as requiring authentiction or ACL's---But it does illustrate that only eventual consistency leaves something to be desired when virtualzing a network. Such problems compound when we try to build larger scale geo-distrubuted virtualized networks, since correlated network splits and latency issues are compounded.
-
-To enforce the global invariants required of the VNS isolaton, a simple solution is to simply require strong consistency over the link-state graph views \cite{bgp:rfc}. This could be implemented by having a Paxos-like service that requires majority consensus to make link-state changes. Then, installed isolation rules could be guaranteed over the network view. This is not an unreasonable consideration---ONOS already maintains global coordination state about the in
-controller-switch relationships in ZooKeeper. Such a coordination service is not included in the OpenDaylight network virtualization system. So adding this would increase the system complexity and reduce the efficency of the network.
-
-What's more problematic is that the CAP theorem \cite{brewer2000towards} shows that we cannot have consistency over the whole virtual network as well as complete availibility and network partition tolerance. This means that to gain strong consistency over the global network view and gain the ability to enforce the global invariants required for isolation, we need to sacrifice avalibility or partition tolerance.
-
-(Could using a shared-log approach to causal ordering guarantees be useful? Perhaps we could use this to enforce strong consistency in each controller's sub-network and define dependencies between them.)
-
-\subsection{Fault tolerance}
-
-ONOS maintains a ZooKeeper 
-
- Is this a global invariant that any switch cannot be part of the South and North Korea VNS's? If so, supporting causal consistency of the graph operations wouldn't do much to prevent such an attack on the system. 
-
- Different netowrk elements only work with their own data.
-
- The shared-log model of ZooKeeper could be very useful in the case of nework separation. If the durable store were maintained at each VNS, then inventory managment could be logically segmented into 
-
-% \subsection{ONOS}
+% \clearpage
 % 
-% make graph structure causally consistent (topology representations with a log backing...)
+% In ODL, there are a few types of networks supported...
+% \section{Proposed SDN extensions}
 % 
-% build a log based event notification system?
+% There are two main representations of state in the systems we have discussed. There is a coordination service ONOS that maintains the naming and other information that must be stored by the controllers. Also, there is a representaion of the graph topology that each controller must learn from the physical switches under its domain. Then, to generate the full topology of the network, these subnetwork topologies must be assembled in the full network view.
 % 
-% causal graph system
-%     eventual consistency does not seem to affect the control plane behavior in traditional applications
+% Consistency, durability, isolation etc requirements for each element of data
 % 
-% adjacency matrix of the graph in the logs
+% \subsection{Isolation}
 % 
-% causal coordination system since there are diffrent network elements
+% In both ONOS, the graph topology information stored by the controllers is eventually consistent. The ONOS paper suggests that this is "good enough" for traditional netowrking, and presumably good enough for their applications \cite{berde2014onos}. 
 % 
-% maintian separations of the topology graph with adjancency in the runtime
-% \subsection{OpenDaylight}
+% Similarly, with OpenDaylight, the graph topology of each controller is generated by BGP and disseminated to the remaining controllers. To generate the full nework view, these sub-network topologies are passed to the master controller-node of the network \cite{ONV:wiki}. However, these network change events are assumed to be rare, and can only gurarantee eventual consistency over the topology link-state graph \cite{bgp:rfc}.
 % 
-% OpenDaylight's modularity and data store agnostic setup makes it well suited for weakly consistent structures.
-
-\subsection{Sharing of data (Avalibility)}
-
+% However, I would argue that this can lead to problems with advanced SDN applications, primarily with network virtualization, since effective netowork virtualzation must be able to reliably isolate resources.
+% 
+% Consider a network configuration with two groups that must be kept separate---Imagine that the engineering and accunting machines of an organization are on the same SDN network, and we want no packets to flow between the Engineering Virtual Network Segement and the Accounting VNS. In this case, imagine the following occurs:
+% 
+% \begin{description}
+% \item [Event 1] Alice connects to a controller in the Engineering VNS.
+% \item [Event 2] Alice connects to a controller in the Accounting VNS.
+% \item [Event 3] Alice disconnects from  the Engineering VNS controller.
+% \end{description}
+% 
+% Instead, with eventual consistency over the topology, the following ordering of events could be observed after those events:
+% 
+% \begin{description}
+% \item [Event 1] Alice connects to a controller in the Engineering VNS.
+% \item [Event 3] Alice disconnects from the Engineering VNS controller.
+% \item [Event 2] Alice connects to a controller in the Accounting VNS.
+% \end{description}
+% 
+% Which the virtualization service would deem valid after Event 3.
+% 
+% Therefore, before it is possble for the network virtualizaton application to observe after the disconnection event that Alice is disconnected from the Enginerring VNS. In reality, however, Alice is connected to both the Engineering and Accounting VNS's. Clearly, in this case, some security measures could be installed to prevent such attacks on the network such as requiring authentiction or ACL's---But it does illustrate that only eventual consistency leaves something to be desired when virtualzing a network. Such problems compound when we try to build larger scale geo-distrubuted virtualized networks, since correlated network splits and latency issues are compounded.
+% 
+% To enforce the global invariants required of the VNS isolaton, a simple solution is to simply require strong consistency over the link-state graph views \cite{bgp:rfc}. This could be implemented by having a Paxos-like service that requires majority consensus to make link-state changes. Then, installed isolation rules could be guaranteed over the network view. This is not an unreasonable consideration---ONOS already maintains global coordination state about the in
+% controller-switch relationships in ZooKeeper. Such a coordination service is not included in the OpenDaylight network virtualization system. So adding this would increase the system complexity and reduce the efficency of the network.
+% 
+% What's more problematic is that the CAP theorem \cite{brewer2000towards} shows that we cannot have consistency over the whole virtual network as well as complete availibility and network partition tolerance. This means that to gain strong consistency over the global network view and gain the ability to enforce the global invariants required for isolation, we need to sacrifice avalibility or partition tolerance.
+% 
+% (Could using a shared-log approach to causal ordering guarantees be useful? Perhaps we could use this to enforce strong consistency in each controller's sub-network and define dependencies between them.)
+% 
+% \subsection{Fault tolerance}
+% 
+% ONOS maintains a ZooKeeper 
+% 
+%  Is this a global invariant that any switch cannot be part of the South and North Korea VNS's? If so, supporting causal consistency of the graph operations wouldn't do much to prevent such an attack on the system. 
+% 
+%  Different netowrk elements only work with their own data.
+% 
+%  The shared-log model of ZooKeeper could be very useful in the case of nework separation. If the durable store were maintained at each VNS, then inventory managment could be logically segmented into 
+% 
+% % \subsection{ONOS}
+% % 
+% % make graph structure causally consistent (topology representations with a log backing...)
+% % 
+% % build a log based event notification system?
+% % 
+% % causal graph system
+% %     eventual consistency does not seem to affect the control plane behavior in traditional applications
+% % 
+% % adjacency matrix of the graph in the logs
+% % 
+% % causal coordination system since there are diffrent network elements
+% % 
+% % maintian separations of the topology graph with adjancency in the runtime
+% % \subsection{OpenDaylight}
+% % 
+% % OpenDaylight's modularity and data store agnostic setup makes it well suited for weakly consistent structures.
+% 
+% \subsection{Sharing of data (Avalibility)}
+% 
 \end{document}
