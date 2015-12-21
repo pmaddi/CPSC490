@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -309,12 +309,12 @@ Underfull \hbox (badness 6842) in paragraph at lines 221--222
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 244--256
+Underfull \hbox (badness 1112) in paragraph at lines 245--257
 \OT1/ptm/m/n/10 tol-er-ant things dis-tribute nib net pol-icy dec-la-ra-tions
  []
 
 [5]
-Underfull \hbox (badness 1558) in paragraph at lines 310--312
+Underfull \hbox (badness 1558) in paragraph at lines 311--313
 \OT1/ptm/m/n/10 could be im-ple-mented by hav-ing a Paxos-like ser-
  []
 

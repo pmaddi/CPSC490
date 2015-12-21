@@ -241,25 +241,7 @@ The topology of the system includes the inventory of nodes, as well as the link-
 
 Different applications tolerate varying levels of inconsistency in the link-state. Ethane \cite{koponen2010onix}, which provides a flow managment interface, prefers the availibility of the link-state to better install flows on the switches. Similarly, virtualization of data centers with multiple tennants requires the creation of networks. The control logic for induvidual tenants stay isolated from each other using encapsulation, so it establishes tunnels between each pair of hypervisors. Since the number of virtual machines can easily be in the thousands, single Onix instances may be unable to keep the full link-state in memory so it would partition the load and maintain a weakly consistent version of it the DHT for tunneling.
 
-
-igp topo, l3 unicast, ospf, isis
-generalized aggregetation as overlay networks
-onix nib etc
-typed entries
-consistency / durability depending on requirements. replicated transactional database and one hop DHT for more tolerant things
-distribute nib
-    net policy declarations change slowly and high durability
-    link load weak
-    status flags of adjacency easier to resolve so kinda in the middle
-    app designers decide where to put nib. 
-        can even roll ya own
-    transactional thing / dynamoish DHT 
-
-    
-    mainly interact with NIB
-    return openflow events and stuff with network state mgmt
-        map swtich database to NIB entries
-        any southbound interface
+In ODL, there are a few types of networks supported...
 
 \subsection*{Flow policies and forwarding behavior}
 
