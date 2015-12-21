@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 19:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 19:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -309,12 +309,10 @@ Underfull \hbox (badness 6842) in paragraph at lines 221--222
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 245--257
-\OT1/ptm/m/n/10 tol-er-ant things dis-tribute nib net pol-icy dec-la-ra-tions
- []
+Underfull \vbox (badness 1648) has occurred while \output is active []
 
-[5]
-Underfull \hbox (badness 1558) in paragraph at lines 311--313
+ [5]
+Underfull \hbox (badness 1558) in paragraph at lines 293--295
 \OT1/ptm/m/n/10 could be im-ple-mented by hav-ing a Paxos-like ser-
  []
 
@@ -328,12 +326,12 @@ Underfull \hbox (badness 1137) in paragraph at lines 64--69
 \OT1/ptm/m/sc/10 b-ling, J., Poutievski, L., Zhu, M., Ra-
  []
 
-[7]
+
 Underfull \hbox (badness 1117) in paragraph at lines 88--92
 \OT1/ptm/m/sc/10 Gray, K.  \OT1/ptm/m/n/10 Open-day-light: To-wards a model-
  []
 
-) [8
+[7]) [8
 
 ] (./template.aux) ) 
 Here is how much of TeX's memory you used:
@@ -351,7 +349,7 @@ fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (8 pages, 106031 bytes).
+Output written on template.pdf (8 pages, 105489 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
