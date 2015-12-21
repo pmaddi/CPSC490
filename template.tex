@@ -243,7 +243,7 @@ Different applications tolerate varying levels of inconsistency in the link-stat
 
 \subsection*{Flow policies and forwarding behavior}
 
-All of the controllers described here are flexible in the southbound interface, but the most supported one used is OpenFlow. Rather than have the application interact with OpenFlow's API, they provide a layer of abstraction over it. Events from the southbound controller are translated into events handled by the controller, and when the application adds flow entries to network entities, a module translates those to OpenFlow operations. 
+All of the controllers described here are flexible in the southbound interface, but the most supported one used is OpenFlow. Rather than have the application interact with OpenFlow's API, they provide a layer of abstraction over it. Events from the southbound controller are translated into events handled by the controller, and when the application adds flow entries to network entities, a module translates those to OpenFlow operations. These policy changes tend to be rare, only, occuring when the application needs to revise a routing descision. The 
 
 When the 
 
