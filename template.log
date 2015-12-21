@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 DEC 2015 00:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 DEC 2015 00:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -304,7 +304,7 @@ File: omlptm.fd
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 181.
 
-Underfull \hbox (badness 6842) in paragraph at lines 224--225
+Underfull \hbox (badness 6842) in paragraph at lines 220--221
 []\OT1/ptm/m/n/10 Distributed stor-age mech-a-nisim that pro-vides
  []
 
@@ -313,26 +313,17 @@ Underfull \hbox (badness 1264) in paragraph at lines 37--40
 []\OT1/ptm/m/sc/10 Enns, R., Bjork-lund, M., and Schoen-
  []
 
-
+[6]
 Underfull \hbox (badness 1137) in paragraph at lines 64--69
 \OT1/ptm/m/sc/10 b-ling, J., Poutievski, L., Zhu, M., Ra-
  []
 
-[6]
+
 Underfull \hbox (badness 1117) in paragraph at lines 88--92
 \OT1/ptm/m/sc/10 Gray, K.  \OT1/ptm/m/n/10 Open-day-light: To-wards a model-
  []
 
 ) [7
-
-]
-Underfull \hbox (badness 1558) in paragraph at lines 304--306
-\OT1/ptm/m/n/10 could be im-ple-mented by hav-ing a Paxos-like ser-
- []
-
-[8
-
-] [9
 
 ] (./template.aux) ) 
 Here is how much of TeX's memory you used:
@@ -350,10 +341,10 @@ fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (9 pages, 107395 bytes).
+Output written on template.pdf (7 pages, 102901 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

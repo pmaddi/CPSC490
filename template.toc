@@ -7,7 +7,3 @@
 \contentsline {subsection}{\numberline {2.3}OpenDaylight}{4}
 \contentsline {section}{\numberline {3}State Maintainence}{5}
 \contentsline {section}{\numberline {4}Conclusion}{6}
-\contentsline {section}{\numberline {5}Proposed SDN extensions}{8}
-\contentsline {subsection}{\numberline {5.1}Isolation}{8}
-\contentsline {subsection}{\numberline {5.2}Fault tolerance}{8}
-\contentsline {subsection}{\numberline {5.3}Sharing of data (Avalibility)}{9}

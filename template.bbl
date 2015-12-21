@@ -21,11 +21,6 @@ Opendaylight network virtualization (onv).
 \newblock In {\em Proceedings of the third workshop on Hot topics in software
   defined networking\/} (2014), ACM, pp.~1--6.
 
-\bibitem{brewer2000towards}
-{\sc Brewer, E.~A.}
-\newblock Towards robust distributed systems.
-\newblock In {\em PODC\/} (2000), vol.~7.
-
 \bibitem{decandia2007dynamo}
 {\sc DeCandia, G., Hastorun, D., Jampani, M., Kakulapati, G., Lakshman, A.,
   Pilchin, A., Sivasubramanian, S., Vosshall, P., and Vogels, W.}

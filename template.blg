@@ -21,45 +21,45 @@ while executing---line 1133 of file acm.bst
 Warning--empty journal in network2015topologies
 Warning--can't use both volume and number fields in decandia2007dynamo
 Warning--empty journal in bgp:rfc
-You've used 18 entries,
+You've used 17 entries,
             2253 wiz_defined-function locations,
-            628 strings with 7157 characters,
-and the built_in function-call counts, 7024 in all, are:
-= -- 641
-> -- 430
+            622 strings with 7083 characters,
+and the built_in function-call counts, 6780 in all, are:
+= -- 621
+> -- 423
 < -- 0
-+ -- 179
-- -- 158
-* -- 591
-:= -- 1146
-add.period$ -- 50
-call.type$ -- 18
-change.case$ -- 131
++ -- 176
+- -- 156
+* -- 576
+:= -- 1108
+add.period$ -- 47
+call.type$ -- 17
+change.case$ -- 127
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 248
-empty$ -- 497
-format.name$ -- 158
-if$ -- 1437
+cite$ -- 23
+duplicate$ -- 233
+empty$ -- 468
+format.name$ -- 156
+if$ -- 1384
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 18
-newline$ -- 89
-num.names$ -- 34
-pop$ -- 142
+int.to.str$ -- 17
+missing$ -- 17
+newline$ -- 84
+num.names$ -- 32
+pop$ -- 134
 preamble$ -- 1
-purify$ -- 113
+purify$ -- 110
 quote$ -- 0
-skip$ -- 167
+skip$ -- 160
 stack$ -- 0
-substring$ -- 326
-swap$ -- 71
+substring$ -- 321
+swap$ -- 69
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 68
 warning$ -- 6
-while$ -- 61
-width$ -- 20
-write$ -- 178
+while$ -- 59
+width$ -- 19
+write$ -- 168
 (There were 6 error messages)
