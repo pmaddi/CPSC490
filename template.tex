@@ -27,8 +27,7 @@
 
 \subsection*{Abstract}
 
-Software Defined Networking enables innovation in network managment by abstracting the control plane away from the data plane of the network. We examine the implementation of three popular distributed SDN controllers: Onix, ONOS, and Open Daylight. Each of these have at least two methods for maintaining network state including a transactional system for providing strong consistnecy and an eventually consistent system for the 
-and discuss the tradeoffs of network state mangagement techniques.
+Software Defined Networking enables innovation in network managment by abstracting the control plane away from the data plane of the network. We examine the implementation of three popular distributed SDN controllers: Onix, ONOS, and Open Daylight. Each of these have at least two methods for maintaining network state, including a transactional system primarily for inventory managemnent as well as an eventually consistent system for more volitile information. These each have tradeoffs in their consistency and availibility charateristics, so are useful for keeping track of different parts of the network.
 
 This paper also introduces and motivates the shared log as a means for maintaining causally consistent state in a distributed system.
 By allowing dependencies to be specified between elements of various shared logs, arbitrary partial orderings of nodes can be constructed while preserving the convenience of having totally ordered logs.
