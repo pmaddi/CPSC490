@@ -252,14 +252,12 @@ These policy changes tend to be rare, only occuring when the application needs t
 
 \section{Conclusion}
 
-
-In both ONOS, the graph topology information stored by the controllers is eventually consistent. The ONOS paper suggests that this is "good enough" for traditional netowrking, and presumably good enough for their applications \cite{berde2014onos}. 
-
-
-
 Each of the SDN controllers have at least two methods for maintaining network state which fall into the categories of a transactional data store, a coordination service with strong consistency gurarantees, and an eventually consistent system with high availibility. 
 
-The controllers aim to maintain an accurate view of the network using these systems, which each have tradeoffs in their consistency and availibility charateristics; this makes them better suited for keeping track of differnt parts of the network. For instance, an network componenet inventory manager might require strong consistency for a given application to properly be able to set up paths in the network end-to-end. On the other hand, eventual consistency may suffice for the more volatile link-state toplogy since it can always be dyanamically reconstructed from the network.
+While these meet the basic requirements for maintaining state in the system, they are inherently inflexible since the entire datastore module needs to be switched by the application to modify the consistency model for some state. The shared-log's causally consistent system allows total ordering to be enforced within regions, with weaker dependencies when needed. 
+
+The controllers aim to maintain an accurate view of the network using these systems, which each have tradeoffs in their consistency and availibility charateristics; these make them better suited for keeping track of differnt parts of the network.
+
 
 This paper also introduces and motivates the shared-log as a means for maintaining causally consistent state in a distributed system. By allowing dependencies to be specified between elements of a set of logs, arbitrary partial orderings of nodes can be constructed while preserving the convenience of having totally ordered logs. This introduces a means for representing data structures in a way that allows for flexible levels of consistency. The purpose of this paper is to help understand how these weaker consistency models may be useful for maintaining state in SDN controllers. 
 
