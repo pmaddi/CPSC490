@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 23:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 DEC 2015 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -214,47 +214,47 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 44.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 42.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 58.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 56.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
 
-Overfull \hbox (34.15628pt too wide) in paragraph at lines 58--59
+Overfull \hbox (34.15628pt too wide) in paragraph at lines 56--57
 [][]\OT1/pcr/m/n/10 runtime.append(id, {dependencies}, data)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 [] \OT1/pcr/m/n/10 -> index \OT1/ptm/m/n/10 Adds an en-try to col-umn id
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 \OT1/ptm/m/n/10 with con-tain-ing data with de-pen-dency set
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 58--59
+Underfull \hbox (badness 3977) in paragraph at lines 56--57
 []\OT1/pcr/m/n/10 {dependencies} \OT1/ptm/m/n/10 and re-turns the in-dex at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 [][]\OT1/pcr/m/n/10 runtime.read_next(id)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 []\OT1/pcr/m/n/10 -> Option index \OT1/ptm/m/n/10 At-tempts to read one
  []
 
@@ -262,49 +262,49 @@ Missing character: There is no â in font pcrr7t!
 Missing character: There is no ˆ in font pcrr7t!
 Missing character: There is no ’ in font pcrr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 [][]\OT1/pcr/m/n/10 runtime.play_foward(id)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 [] \OT1/pcr/m/n/10 > Option (index, index) \OT1/ptm/m/n/10 Reads all
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 62--63
+Underfull \hbox (badness 1546) in paragraph at lines 60--61
 \OT1/ptm/m/n/10 their de-pen-den-cies, re-turn-ing the first and last
  []
 
 [2] [3]
-Underfull \hbox (badness 1264) in paragraph at lines 136--137
+Underfull \hbox (badness 1264) in paragraph at lines 134--135
 []\OT1/ptm/m/n/10 ONOS uses Zookeeper as a co-or-di-na-tion mech-a-
  []
 
 
-Overfull \hbox (14.15869pt too wide) in paragraph at lines 165--166
+Overfull \hbox (14.15869pt too wide) in paragraph at lines 163--164
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.15875pt too wide) in paragraph at lines 169--170
+Overfull \hbox (20.15875pt too wide) in paragraph at lines 167--168
 [][][][][][][][][][][][] 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 []\OT1/ptm/m/n/10 An op-er-a-tion con-fig-ur-ing such a peer with
  []
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 183.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 181.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 183.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 181.
 
-Underfull \hbox (badness 6842) in paragraph at lines 226--227
+Underfull \hbox (badness 6842) in paragraph at lines 224--225
 []\OT1/ptm/m/n/10 Distributed stor-age mech-a-nisim that pro-vides
  []
 
@@ -326,7 +326,7 @@ Underfull \hbox (badness 1117) in paragraph at lines 88--92
 ) [7
 
 ]
-Underfull \hbox (badness 1558) in paragraph at lines 305--307
+Underfull \hbox (badness 1558) in paragraph at lines 303--305
 \OT1/ptm/m/n/10 could be im-ple-mented by hav-ing a Paxos-like ser-
  []
 
@@ -342,7 +342,7 @@ Here is how much of TeX's memory you used:
  6449 multiletter control sequences out of 15000+600000
  20439 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,32p,923b,1083s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,32p,954b,1083s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r
 .enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
 pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
@@ -350,7 +350,7 @@ fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (9 pages, 107212 bytes).
+Output written on template.pdf (9 pages, 107280 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
