@@ -330,7 +330,7 @@ Underfull \hbox (badness 1117) in paragraph at lines 88--92
 ) [7
 
 ]
-Underfull \hbox (badness 1558) in paragraph at lines 307--309
+Underfull \hbox (badness 1558) in paragraph at lines 305--307
 \OT1/ptm/m/n/10 could be im-ple-mented by hav-ing a Paxos-like ser-
  []
 
@@ -354,7 +354,7 @@ fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (9 pages, 106911 bytes).
+Output written on template.pdf (9 pages, 107121 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
