@@ -27,7 +27,9 @@
 
 \subsection*{Abstract}
 
-Software Defined Networking enables innovation in network managment by abstracting the control plane away from the data plane of the network. We examine the implementation of three popular distributed SDN controllers: Onix, ONOS, and Open Daylight. Each of these have at least two methods for maintaining network state, including a transactional system primarily for inventory managemnent as well as an eventually consistent system for more volitile information. These each have tradeoffs in their consistency and availibility charateristics, so are useful for keeping track of different parts of the network.
+Software Defined Networking enables innovation in network managment by abstracting the control plane away from the data plane of the network. We examine the implementation of three popular distributed SDN controllers: Onix, ONOS, and Open Daylight. 
+
+Each of these have at least two methods for maintaining network state which fall into the categories of a transactional data store, a coordination service with strong consistency gurarantees, and an eventually consistent system with high availibility. The controllers aim to maintain an accurate view of the network using these systems, which each have tradeoffs in their consistency and availibility charateristics. This makes them better suited for keeping track of differnt parts of the network--an network componenet inventory manager might require strong consistency for a given application, while eventual consisntcy may suffice for the more volitile toplogy link-state.
 
 This paper also introduces and motivates the shared-log as a means for maintaining causally consistent state in a distributed system. By allowing dependencies to be specified between elements of a set of logs, arbitrary partial orderings of nodes can be constructed while preserving the convenience of having totally ordered logs. The purpose of this paper is to help understand how these weaker consistency models may be useful for maintaining state in SDN controllers. 
 
