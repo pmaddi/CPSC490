@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Consistency models of programmable networks</title>
+  </head>
+  <body>
+    <h2>Consistency models of programmable networks</h2>
+    <h3>Pranav Maddi</h3>
+    <h3>Advisor: Mahesh Balakrishnan</h3>
+    <br />
+    <h3>Abstract</h3>
+
+    <p>Software Defined Networking enables innovation in network management by abstracting the control plane away from the data plane of the network. We examine the implementation of three popular distributed SDN controllers: Onix, ONOS, and Open Daylight. Each of the SDN controllers have at least two methods for maintaining network state. These fall into the categories of a transactional data store, a coordination service with strong consistency guarantees, and an eventually consistent system with high availability. The controllers aim to maintain an accurate view of the network using these systems, which each have trade-offs in their consistency and availability characteristics; this makes them better suited for keeping track of different parts of the network. For instance, an network component inventory manager might require strong consistency for a given application to properly be able to set up paths in the network end-to-end. On the other hand, eventual consistency may suffice for the more volatile link-state topology since it can always be dynamically reconstructed from the network.</p>
+
+    <p>This paper also introduces and motivates the shared-log as a means for maintaining causally consistent state in a distributed system. By allowing dependencies to be specified between elements of a set of logs, arbitrary partial orderings of nodes can be constructed while preserving the semantics of totally ordered logs. This introduces a means for representing data structures in a way that allows for flexible levels of consistency. The purpose of this paper is to help understand how these weaker consistency models may be useful for maintaining state in SDN controllers. </p>
+
+<br/><a href="Pranav_proposal.pdf">Proposal</a>
+<br/><a href="Pranav_report.pdf">Report</a>
+
+</body>
+</html>
