@@ -1,9 +1,0 @@
-\contentsline {section}{\numberline {1}Background}{1}
-\contentsline {subsection}{\numberline {1.1}Shared logs}{1}
-\contentsline {subsection}{\numberline {1.2}Consistency}{2}
-\contentsline {section}{\numberline {2}SDN Controllers}{2}
-\contentsline {subsection}{\numberline {2.1}Onix}{3}
-\contentsline {subsection}{\numberline {2.2}ONOS}{3}
-\contentsline {subsection}{\numberline {2.3}OpenDaylight}{4}
-\contentsline {section}{\numberline {3}State Maintenance}{5}
-\contentsline {section}{\numberline {4}Conclusion}{6}
