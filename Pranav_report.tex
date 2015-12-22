@@ -35,7 +35,7 @@ This paper also introduces and motivates the shared-log as a means for maintaini
 
 The purpose of this report is to document the current progress in SDN systems and discuss the types and requirements of state in these systems. The paper introduces the idea of the shared-log architecture for providing causal consistency. Ultimately, we would like to motivate the idea that causal consistency would be useful in providing weaker consistency guarantees for certain types of shared state among SDN controllers.
 
-While this paper functions primarily as a literature review, (link to paper) is a related paper written concurrently to this one describing the implementation of a ZooKeeper-like system over shared logs.
+While this paper functions primarily as a literature review, we are concurrently working on a related system implementing a ZooKeeper-like system over shared logs.
 
 \subsection{Shared logs}
 
@@ -61,12 +61,12 @@ The shared log runtime exposes the following API:
 
 \end{itemize}
 
-
 \subsection{Consistency}
 
-Not all applications require a strong consistency guarantee. Depending on the particular application, lower latency reads or the ability to write immediately could be preferred. We would like to enable our users to select what level of consistency works for them. Rather than have the consistency level be specified at development time, we would like to support this at the API level. By having something like a Service Level Agreement specified within the update\_helper and query\_helper, the client could configure the guarantee that works best in the situation. The SLA specified would then inform where in the DAG to place the update. The motivation for such a system is that different procedures in an application can have different guarantee requirements.
+Not all applications require a strong consistency guarantee. Depending on the particular application, lower latency reads or the ability to write immediately could be preferred. We would like to enable our users to select what level of consistency works for them. Rather than have the consistency level be specified at development time, we would like to support this at the API level. By having the ability to organize dependencies in the logs, the client could configure the
+guarantees that works best in the situation. The motivation for such a system is that different procedures in an application can have different guarantee requirements.
 
-SLA requirements we may support include: \cite{SLA}
+Requirements that a shared-log system may support include \cite{SLA}:
 
 \begin{description}
 \item[strong] returns the value of the last preceding Put(key) performed by any client
@@ -83,7 +83,7 @@ Any of these consistencies could be supported with the multiple shared log struc
 
 \section{SDN Controllers}
 
-In general, SDN allows central control of a network. It aims to keep the complexity of the network manageable by providing abstractions for the underlying network devices. SDN provides four main advantages over traditional networks:\cite{jain2013network}
+In general, SDN allows central control of a network. It aims to keep the complexity of the network manageable by providing abstractions for the underlying network devices. SDN provides four main advantages over traditional networks \cite{jain2013network}:
 
 \begin{itemize}
 \item Separation of the control and data planes
@@ -221,8 +221,7 @@ We examine the types of state maintained by software defined networks, and how t
 \item Notification system where controller logic can subscribe to state change events from particular elements of data
 \end{itemize}
 
-With these services, all of these systems aim to manage the state of the network through the network information base (by various names depending on the controller.) These include the representation of the network topology as well as the state shared by the other controller instances. While this idea unites the various controllers, they behave differently in how they divide these abstractions among the data plane, state management layer, and the application control
-logic. Newer systems such as OpenDaylight and ONOS tend to give the application higher level abstraction as to how to store state, and in the case of OpenDaylight completely abstracts the datastore as dynamically loadable resource that can be selected by the API. Older systems such as Onix theoretically provide the same functionality but simply define an interface for managing the resources. 
+With these services, all of these systems aim to manage the state of the network through the network information base (by various names depending on the controller.) These include the representation of the network topology as well as the state shared by the other controller instances. While this idea unites the various controllers, they behave differently in how they divide these abstractions among the data plane, state management layer, and the application control logic. Newer systems such as OpenDaylight and ONOS tend to give the application higher level abstraction as to how to store state, and in the case of OpenDaylight completely abstracts the datastore as dynamically loadable resource that can be selected by the API. Older systems such as Onix theoretically provide the same functionality but simply define an interface for managing the resources. 
 
 \subsection*{Inventory}
 
@@ -235,11 +234,9 @@ How the inventory is managed depends primarily on the scale of the network since
 
 \subsection*{Topology and link-state}
 
-The topology of the system includes the inventory of nodes, as well as the link-states between them. In general, the consistency requirements are weaker when dealing with link-state, since they can always be dynamically generated from the network. Applications tend to prefer availability, and no applications should require persistence of the link-state. Onix stores these eventually consistent state in a DHT with one-hop routing similar to Dynamo \cite{decandia2007dynamo}.
+The topology of the system includes the inventory of nodes, as well as the link-states among them. In general, the consistency requirements are weaker when dealing with link-state, since they can always be dynamically generated from the network. Applications tend to prefer availability, and no applications should require persistence of the link-state. Onix stores these eventually consistent state in a DHT with one-hop routing similar to Dynamo \cite{decandia2007dynamo}.
 
 Different applications tolerate varying levels of inconsistency in the link-state. Ethane \cite{koponen2010onix}, which provides a flow management interface, prefers the availability of the link-state to better install flows on the switches. Similarly, virtualization of data centers with multiple tenants requires the creation of networks. The control logic for individual tenants stay isolated from each other using encapsulation, so it establishes tunnels between each pair of hypervisors. Since the number of virtual machines can easily be in the thousands, single Onix instances may be unable to keep the full link-state in memory so it would partition the load and maintain a weakly consistent version of it the DHT for tunneling.
-
-(I might add a bit more here...)
 
 \subsection*{Flow policies and forwarding behavior}
 
@@ -261,7 +258,7 @@ The controller's main goal is to maintain and modify an accurate view of the net
 
 
 \bibliographystyle{acm}
-\bibliography{template}
+\bibliography{Pranav_report}
 
 % (Partitioning the flow-processing state requires that all controllers be able to set up paths in the network, end to end. Therefore, each Onix instance needs to know the location of all end-points as well as the link state of the network. However, it is not particularly important that this information be strongly consistent between controllers. At worst, a flow is routed to an old location of the host over a failed link, which is impossible to avoid during network element failures.
 % It is also unnecessary for the link state to be persistent, since this information is obtained dynamically. Therefore, the controllers can use the DHT for storing link-state, which allows tens of thousands of updates per second (see Section 7).)

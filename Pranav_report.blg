@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Pranav_report.aux
+The style file: acm.bst
+Database file #1: Pranav_report.bib
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1092 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1092 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1092 of file acm.bst
+Warning--to sort, need author or key in ONV:wiki
+Warning--empty author in ONV:wiki
+Warning--empty journal in ONV:wiki
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1133 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1133 of file acm.bst
+Too many commas in name 1 of "A. Clemm, J. Medved, R. Varga, T. Tkacik, N. Bahadur, H. Ananthakrishnan" for entry network2015topologies
+while executing---line 1133 of file acm.bst
+Warning--empty journal in network2015topologies
+Warning--can't use both volume and number fields in decandia2007dynamo
+Warning--empty journal in bgp:rfc
+You've used 17 entries,
+            2253 wiz_defined-function locations,
+            622 strings with 7093 characters,
+and the built_in function-call counts, 6780 in all, are:
+= -- 621
+> -- 423
+< -- 0
++ -- 176
+- -- 156
+* -- 576
+:= -- 1108
+add.period$ -- 47
+call.type$ -- 17
+change.case$ -- 127
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 233
+empty$ -- 468
+format.name$ -- 156
+if$ -- 1384
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 17
+newline$ -- 84
+num.names$ -- 32
+pop$ -- 134
+preamble$ -- 1
+purify$ -- 110
+quote$ -- 0
+skip$ -- 160
+stack$ -- 0
+substring$ -- 321
+swap$ -- 69
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 68
+warning$ -- 6
+while$ -- 59
+width$ -- 19
+write$ -- 168
+(There were 6 error messages)
